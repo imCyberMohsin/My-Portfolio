@@ -19,43 +19,43 @@ const Navbar = () => {
                     </button>
                     <div className="hidden w-full md:block md:w-auto" id="navbar-default">
                         <ul className="transition-all duration-200 font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 bg-transparent">
-                            <li className="sm:hover:underline sm:underline-offset-8 decoration-blue-600">
+                            <li className="sm:hover:underline sm:underline-offset-8 decoration-blue-700">
                                 <NavLink
                                     to="/"
-                                    className={({isActive})=> `${ isActive ? "underline decoration-blue-600 text-blue-600" : "" } block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:text-white md:dark:hover:bg-transparent"`}
+                                    className={({isActive})=> `${ isActive ? "underline decoration-blue-700 text-blue-600" : "" } block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:text-white md:dark:hover:bg-transparent"`}
                                     aria-current="page"
                                 >
                                     Home
                                 </NavLink>
                             </li>
-                            <li className="sm:hover:underline sm:underline-offset-8 decoration-blue-600">
+                            <li className="sm:hover:underline sm:underline-offset-8 decoration-blue-700">
                                 <NavLink
                                     to="/skills"
-                                    className={({isActive})=> `${ isActive ? "underline decoration-blue-600 text-blue-600" : "" } block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-[#3f3f3f] dark:hover:text-white md:dark:hover:bg-transparent`}
+                                    className={({isActive})=> `${ isActive ? "underline decoration-blue-700 text-blue-600" : "" } block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-[#3f3f3f] dark:hover:text-white md:dark:hover:bg-transparent`}
                                 >
                                     Skills
                                 </NavLink>
                             </li>
-                            <li className="sm:hover:underline sm:underline-offset-8 decoration-blue-600">
+                            <li className="sm:hover:underline sm:underline-offset-8 decoration-blue-700">
                                 <NavLink
                                     to="/projects"
-                                    className={({isActive})=> `${ isActive ? "underline decoration-blue-600 text-blue-600" : "" } block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-[#3f3f3f] dark:hover:text-white md:dark:hover:bg-transparent`}
+                                    className={({isActive})=> `${ isActive ? "underline decoration-blue-700 text-blue-600" : "" } block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-[#3f3f3f] dark:hover:text-white md:dark:hover:bg-transparent`}
                                 >
                                     Projects
                                 </NavLink>
                             </li>
-                            <li className="sm:hover:underline sm:underline-offset-8 decoration-blue-600">
+                            <li className="sm:hover:underline sm:underline-offset-8 decoration-blue-700">
                                 <NavLink
                                     to="/services"
-                                    className={({isActive})=> `${ isActive ? "underline decoration-blue-600 text-blue-600" : "" } block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-[#3f3f3f] dark:hover:text-white md:dark:hover:bg-transparent`}
+                                    className={({isActive})=> `${ isActive ? "underline decoration-blue-700 text-blue-600" : "" } block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-[#3f3f3f] dark:hover:text-white md:dark:hover:bg-transparent`}
                                 >
                                     Services
                                 </NavLink>
                             </li>
-                            <li className="sm:hover:underline sm:underline-offset-8 decoration-blue-600">
+                            <li className="sm:hover:underline sm:underline-offset-8 decoration-blue-700">
                                 <NavLink
                                     to="/contact"
-                                    className={({isActive})=> `${ isActive ? "underline decoration-blue-600 text-blue-600" : "" } block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-[#3f3f3f] dark:hover:text-white md:dark:hover:bg-transparent`}
+                                    className={({isActive})=> `${ isActive ? "underline decoration-blue-700 text-blue-600" : "" } block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-[#3f3f3f] dark:hover:text-white md:dark:hover:bg-transparent`}
                                 >
                                     Contact
                                 </NavLink>

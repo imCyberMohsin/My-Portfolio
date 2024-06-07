@@ -40,8 +40,9 @@ const Home = () => {
                     </div>
 
                     <a href="../../resume.pdf" download
-                        className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-semibold rounded-full text-lg px-6 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-white transition-all duration-150">Download
-                        My Resume</a>
+                        className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-semibold rounded-full text-lg px-6 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-white transition-all duration-150"
+                    >
+                        Download My Resume</a>
                 </div>
 
                 {/* <!-- Right --> */}
