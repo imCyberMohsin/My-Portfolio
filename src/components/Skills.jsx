@@ -40,7 +40,7 @@ const Skills = () => {
                 <div className="frontend">
                     <h1 className="text-3xl py-3 font-semibold text-center">Frontend</h1>
                     <div className="icons flex justify-center flex-wrap gap-8">
-                        <div className="w-24 flex flex-col gap-2 items-center border-2 rounded-md p-2 cursor-pointer shadow-md hover:shadow-white hover:bg-white hover:text-black transition-all duration-200">
+                        <div className="w-24 flex flex-col gap-2 items-center border-2 rounded-md p-2 cursor-pointer shadow-md hover:shadow-white transition-all duration-200">
                             <div className="img sm:w-10 sm:h-10 w-8 h-8">
                                 <img src="../../images/skills/html-5.png" alt="" />
                             </div>
@@ -94,7 +94,7 @@ const Skills = () => {
                 <div className="Backend">
                     <h1 className="text-3xl py-3 font-semibold text-center">Backend</h1>
                     <div className="icons flex justify-center flex-wrap gap-8">
-                        <div className="w-24 flex flex-col gap-2 items-center border-2 rounded-md p-2 cursor-pointer shadow-md hover:shadow-white hover:bg-white hover:text-black transition-all duration-200">
+                        <div className="w-24 flex flex-col gap-2 items-center border-2 rounded-md p-2 cursor-pointer shadow-md hover:shadow-white transition-all duration-200">
                             <div className="img sm:w-10 sm:h-10 w-8 h-8">
                                 <img src="../../images/skills/node.png" alt="" />
                             </div>
@@ -136,7 +136,7 @@ const Skills = () => {
                 <div className="Tools">
                     <h1 className="text-3xl py-3 font-semibold text-center">Tools & Platforms</h1>
                     <div className="icons flex justify-center flex-wrap gap-8">
-                        <div className="w-24 flex flex-col gap-2 items-center border-2 rounded-md p-2 cursor-pointer shadow-md hover:shadow-white hover:bg-white hover:text-black transition-all duration-200">
+                        <div className="w-24 flex flex-col gap-2 items-center border-2 rounded-md p-2 cursor-pointer shadow-md hover:shadow-white transition-all duration-200">
                             <div className="img sm:w-10 sm:h-10 w-8 h-8">
                                 <img src="../../images/skills/git.png" alt="" />
                             </div>
