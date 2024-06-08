@@ -4,19 +4,19 @@ const Home = () => {
     return (
         <>
             {/* <!--! Home --> */}
-            <div id="home"
+            <div id="Home" name="Home"
                 className="Home w-full h-screen bg-[#1f1f1f] flex flex-col sm:flex-row justify-center items-center gap-5 sm:gap-8">
                 {/* <!-- Left --> */}
-                <div className="left sm:w-2/5 w-4/5 text-white flex flex-col sm:justify-start sm:items-start items-center gap-4 mt-12">
+                <div className="left sm:w-2/5 w-4/5 text-white flex flex-col sm:justify-start sm:items-start items-center gap-4">
                     {/* <!-- <h3 className="text-blue-700 text-3xl font-semibold">Hey!</h3> --> */}
 
                     <div>
-                        <h1 className="text-4xl sm:text-6xl font-semibold">I'm Mohsin Ansari</h1>
-                        <p className="typing-text text-blue-500 text-xl sm:text-3xl font-semibold">Fullstack Web Developer</p>
+                        <h1 className="text-5xl sm:text-6xl font-semibold">I'm Mohsin</h1>
+                        <h2 className="typing-text text-blue-500 text-xl sm:text-3xl font-semibold">Fullstack Web Developer</h2>
                     </div>
 
                     <p className="sm:w-4/5 sm:text-lg text-gray-300 text-justify">I'm Mohsin, a Full Stack Developer skilled in HTML,
-                        CSS, JS, EJS, Node.js, Express.js, MongoDB, and Tailwind CSS. With a passion for crafting seamless and
+                        CSS, JS, EJS, React.js, Node.js, Express.js, MongoDB, and Tailwind CSS. With a passion for crafting seamless and
                         visually appealing web applications, I specialize in creating dynamic and user-friendly experiences. Let's
                         collaborate and turn your ideas into reality!</p>
 

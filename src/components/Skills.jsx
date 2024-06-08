@@ -33,7 +33,7 @@ const Skills = () => {
             {/* <!--! Skills  --> */}
             <div id="skills" className="skills w-full sm:h-screen text-white bg-[#1f1f1f] flex flex-col items-center p-6 gap-8">
                 <div className="mt-12">
-                    <h1 className="text-white text-4xl font-bold">Skills / Stacks</h1>
+                    <h1 className="text-white text-4xl font-bold underline underline-offset-8">Skills | Tech Stacks</h1>
                 </div>
 
                 {/* <!-- Frontend --> */}

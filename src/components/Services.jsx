@@ -5,7 +5,7 @@ const Services = () => {
         <>
             {/* <!--! Services --> */}
             <div id="services" className="services min-h-screen w-full bg-[#1f1f1f] p-6 px-20">
-                <h1 className="text-white text-4xl font-bold text-center py-10 sm:py-8">Services</h1>
+                <h1 className="text-white text-4xl font-bold text-center py-10 sm:py-8 underline underline-offset-8">Services</h1>
                 <div className="mt-12">
                     {/* <!-- Services Box --> */}
                     <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-10 sm:gap-20 text-white sm:m-10">

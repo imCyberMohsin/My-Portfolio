@@ -1,12 +1,12 @@
 import React from 'react'
 
-const Projects = () => {
+const Portfolio = () => {
     return (
         <>
-            {/* <!--! Projects  --> */}
-            <div id="projects" className="projects w-full text-white bg-[#1f1f1f] flex flex-col items-center p-6 gap-8">
+            {/* <!--! Portfolio  --> */}
+            <div id="Portfolio" className="Portfolio w-full text-white bg-[#1f1f1f] flex flex-col items-center p-6 gap-8">
                 <div className="mt-12">
-                    <h1 className="text-white text-4xl font-bold">Projects</h1>
+                    <h1 className="text-white text-4xl font-bold underline underline-offset-8">Portfolio</h1>
                 </div>
 
                 {/* <!-- Cards --> */}
@@ -89,4 +89,4 @@ const Projects = () => {
     )
 }
 
-export default Projects
+export default Portfolio
