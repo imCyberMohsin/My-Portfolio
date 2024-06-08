@@ -1,6 +1,33 @@
 import React from 'react';
 
 const Home = () => {
+    const socials = [
+        {
+            name: 'LinkedIn',
+            href: 'https://www.linkedin.com/in/mohsin-ansari127/',
+            socialIconCSS: "icons w-10 h-10 bg-transparent rounded-full overflow-hidden flex justify-center items-center border-2 cursor-pointer hover:bg-blue-600 shadow-sm hover:shadow-blue-600 transition-all duration-200",
+            fontAwsmIcon: 'fa-linkedin',
+        },
+        {
+            name: 'X',
+            href: 'https://www.linkedin.com/in/mohsin-ansari127/',
+            socialIconCSS: "icons w-10 h-10 bg-transparent rounded-full overflow-hidden flex justify-center items-center border-2 cursor-pointer hover:bg-blue-600 shadow-sm hover:shadow-blue-600 transition-all duration-200",
+            fontAwsmIcon: 'fa-x-twitter',
+        },
+        {
+            name: 'Github',
+            href: 'https://github.com/imCyberMohsin',
+            socialIconCSS: "icons w-10 h-10 bg-transparent rounded-full overflow-hidden flex justify-center items-center border-2 cursor-pointer hover:bg-blue-600 shadow-sm hover:shadow-blue-600 transition-all duration-200",
+            fontAwsmIcon: 'fa-github',
+        },
+        {
+            name: 'Discord',
+            href: 'https://www.linkedin.com/in/mohsin-ansari127/',
+            socialIconCSS: "icons w-10 h-10 bg-transparent rounded-full overflow-hidden flex justify-center items-center border-2 cursor-pointer hover:bg-blue-600 shadow-sm hover:shadow-blue-600 transition-all duration-200",
+            fontAwsmIcon: 'fa-discord',
+        },
+    ]
+
     return (
         <>
             {/* <!--! Home --> */}
@@ -8,8 +35,6 @@ const Home = () => {
                 className="Home w-full h-screen bg-[#1f1f1f] flex flex-col sm:flex-row justify-center items-center gap-5 sm:gap-8">
                 {/* <!-- Left --> */}
                 <div className="left sm:w-2/5 w-4/5 text-white flex flex-col sm:justify-start sm:items-start items-center gap-4">
-                    {/* <!-- <h3 className="text-blue-700 text-3xl font-semibold">Hey!</h3> --> */}
-
                     <div>
                         <h1 className="text-5xl sm:text-6xl font-semibold">I'm Mohsin</h1>
                         <h2 className="typing-text text-blue-500 text-xl sm:text-3xl font-semibold">Fullstack Web Developer</h2>
@@ -20,23 +45,18 @@ const Home = () => {
                         visually appealing web applications, I specialize in creating dynamic and user-friendly experiences. Let's
                         collaborate and turn your ideas into reality!</p>
 
+                    {/* Socials */}
                     <div className="socials flex gap-5 my-1">
-                        <a href="https://www.linkedin.com/in/mohsin-ansari127/" target="_blank"
-                            className="icons w-10 h-10 bg-transparent rounded-full overflow-hidden flex justify-center items-center border-2 cursor-pointer hover:bg-blue-600 shadow-sm hover:shadow-blue-600 transition-all duration-200 ">
-                            <i className="fa-brands fa-linkedin text-2xl"></i>
-                        </a>
-                        <a href="#" target="_blank"
-                            className="icons w-10 h-10 bg-transparent rounded-full overflow-hidden flex justify-center items-center border-2 cursor-pointer hover:bg-blue-600 shadow-sm hover:shadow-blue-600 transition-all duration-200">
-                            <i className="fa-brands fa-x-twitter text-2xl"></i>
-                        </a>
-                        <a href="https://github.com/imCyberMohsin" target="_blank"
-                            className="icons w-10 h-10 bg-transparent rounded-full overflow-hidden flex justify-center items-center border-2 cursor-pointer hover:bg-blue-600 shadow-sm hover:shadow-blue-600 transition-all duration-200">
-                            <i className="fa-brands fa-github text-2xl"></i>
-                        </a>
-                        <a href="#" target="_blank"
-                            className="icons w-10 h-10 bg-transparent rounded-full overflow-hidden flex justify-center items-center border-2 cursor-pointer hover:bg-blue-600 shadow-sm hover:shadow-blue-600 transition-all duration-200">
-                            <i className="fa-brands fa-discord text-2xl"></i>
-                        </a>
+                        {
+                            socials.map(({ name, href, socialIconCSS, fontAwsmIcon }) => {
+                                return (
+                                    <a key={name} href={href} target="_blank"
+                                        className={socialIconCSS}>
+                                        <i className={`fa-brands ${fontAwsmIcon} text-2xl`}></i>
+                                    </a>
+                                )
+                            })
+                        }
                     </div>
 
                     <a href="../../resume.pdf" download
