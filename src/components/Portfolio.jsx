@@ -4,8 +4,8 @@ const Portfolio = () => {
     const cardsData = [
         {
             id: 0,
-            name: 'Food Delivery Website',
-            imgPath: '',
+            name: 'Food Delivery',
+            imgPath: '../../images/projects/food.png',
             live_link: 'https://attendance-system-whdl.onrender.com',
             repo_link: 'https://github.com/imCyberMohsin/Food-Delivery-App.git',
         },
@@ -43,12 +43,12 @@ const Portfolio = () => {
         <>
             {/* <!--! Portfolio  --> */}
             <div id="Portfolio" className="Portfolio w-full text-white bg-[#1f1f1f] flex flex-col items-center p-6 gap-8">
-                <div className="mt-12">
+                <div className="sm:mt-12">
                     <h1 className="text-white text-4xl font-bold underline underline-offset-8">Portfolio</h1>
                 </div>
 
                 {/* <!-- Card wrapper --> */}
-                <div className="cards flex gap-5 flex-wrap justify-center">
+                <div className="cards flex gap-8 flex-wrap justify-center sm:px-20">
                     {/* <!-- Card --> */}
                     {
                         cardsData.map(({ id, name, imgPath, live_link, repo_link }) => {
