@@ -78,6 +78,7 @@ const Navbar = () => {
                                                 to={`/${link}`}
                                                 className={({ isActive }) => `${isActive ? "underline underline-offset-2 dark:text-blue-600 text-blue-600 decoration-blue-600" : ""} block py-2 px-3 text-white hover:text-blue-600 hover:underline underline-offset-2"`}
                                                 aria-current="page"
+                                                onClick={() => setNav(!nav)}
                                             >
                                                 {link}
                                             </NavLink>
