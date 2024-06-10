@@ -42,7 +42,9 @@ const Portfolio = () => {
     return (
         <>
             {/* <!--! Portfolio  --> */}
-            <div id="Portfolio" className="Portfolio w-full text-white bg-[#1f1f1f] flex flex-col items-center p-6 gap-8">
+            <div id="portfolio"
+                name="portfolio"
+                className="portfolio w-full text-white bg-[#1f1f1f] flex flex-col items-center p-6 gap-8">
                 <div className="sm:mt-12">
                     <h1 className="text-white text-4xl font-bold underline underline-offset-8">Portfolio</h1>
                 </div>
@@ -53,12 +55,12 @@ const Portfolio = () => {
                     {
                         cardsData.map(({ id, name, imgPath, live_link, repo_link }) => {
                             return (
-                                <div id={id} className="card w-80 border-2 rounded-md p-3 flex flex-col items-center gap-3 cursor-pointer shadow-md hover:shadow-white transition-all duration-200">
+                                <div id={id} className="card w-80 shadow-gray-300 shadow-sm hover:shadow-md rounded-md flex flex-col items-center gap-3 cursor-pointer hover:shadow-white transition-all duration-200">
                                     <div className="img h-auto w-full">
-                                        <img className="rounded-md h-full w-full" src={imgPath} alt="image" />
+                                        <img className="hover:scale-105 hover:rounded-md rounded-tr-md rounded-tl-md h-full w-full transition-all duration-200" src={imgPath} alt="image" />
                                     </div>
                                     <div className="w-full title text-3xl font-semibold text-center">{name}</div>
-                                    <div className="links w-full flex gap-5 justify-between">
+                                    <div className="links w-full flex p-3 gap-5 justify-between">
                                         <a target='_blank' href={live_link} className="font-semibold hover:text-blue-600 text-base transition-all duration-200">Live Link <i className="fa-solid fa-link  text-sm"></i></a>
                                         <a target='_blank' href={repo_link} className="font-semibold hover:text-blue-600 text-base transition-all duration-200">Repo Link <i className="fa-solid fa-link  text-sm"></i></a>
                                     </div>

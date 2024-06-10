@@ -7,7 +7,7 @@ const Skills = () => {
             category: 'Frontend',
             info: {
                 imgPath: '../../images/skills/',
-                names: ['html-5.png', 'css-3.png', 'js.png', 'ejs.png', 'react.png', 'tailwind.png', 'bootstrap.png']
+                names: ['HTML.png', 'CSS.png', 'JS.png', 'EJS.png', 'React.png', 'Tailwind.png', 'Bootstrap.png']
             }
         },
         // Backend
@@ -15,7 +15,7 @@ const Skills = () => {
             category: 'Backend',
             info: {
                 imgPath: '../../images/skills/',
-                names: ['node.png', 'express.png', 'mongodb.png', 'api.png']
+                names: ['Node.png', 'Express.png', 'MongoDB.png', 'API.png']
             }
         },
         // Tools
@@ -23,7 +23,7 @@ const Skills = () => {
             category: 'Tools',
             info: {
                 imgPath: '../../images/skills/',
-                names: ['git.png', 'github.png', 'linux.png', 'postman.png']
+                names: ['Git.png', 'Github.png', 'Linux.png', 'Postman.png']
             }
         }
     ];
@@ -46,7 +46,7 @@ const Skills = () => {
                                     {
                                         info.names.map((name) => {
                                             return (
-                                                <div className="w-24 flex flex-col gap-2 items-center border-2 rounded-md p-2 cursor-pointer shadow-md hover:shadow-white transition-all duration-200">
+                                                <div className="w-24 flex flex-col gap-2 items-center shadow-sm hover:shadow-md rounded-md p-2 cursor-pointer shadow-gray-300 hover:shadow-white hover:scale-105 transition-all duration-200">
                                                     <div className="img sm:w-10 sm:h-10 w-8 h-8">
                                                         <img src={`${info.imgPath}${name}`} alt="x" />
                                                     </div>

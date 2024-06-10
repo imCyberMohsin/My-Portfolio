@@ -45,7 +45,7 @@ const Services = () => {
                         {
                             boxData.map(({ id, service, info }) => {
                                 return (
-                                    <div key={id} className="box min-h-1 bg-red border-2 rounded-lg p-5 cursor-pointer shadow-md hover:shadow-white transition-all duration-200">
+                                    <div key={id} className="box min-h-1 rounded-lg p-5 cursor-pointer shadow-sm shadow-gray-400 hover:shadow-white hover:shadow-md transition-all duration-200">
                                         <h1 className="text-3xl py-2 font-semibold">{service}</h1>
                                         <p className="text-justify">{info}</p>
                                     </div>
