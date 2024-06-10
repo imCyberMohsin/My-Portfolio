@@ -46,7 +46,7 @@ const Skills = () => {
                                     {
                                         info.names.map((name) => {
                                             return (
-                                                <div className="w-24 flex flex-col gap-2 items-center shadow-sm hover:shadow-md rounded-md p-2 cursor-pointer shadow-gray-300 hover:shadow-white hover:scale-105 transition-all duration-200">
+                                                <div className="w-28 flex flex-col gap-2 items-center shadow-sm hover:shadow-md rounded-md p-2 cursor-pointer shadow-gray-300 hover:shadow-white hover:scale-105 transition-all duration-200">
                                                     <div className="img sm:w-10 sm:h-10 w-8 h-8">
                                                         <img src={`${info.imgPath}${name}`} alt="x" />
                                                     </div>

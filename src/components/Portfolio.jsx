@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Portfolio = () => {
-    const cardsData = [
+    const portfolioData = [
         {
             id: 0,
             name: 'Food Delivery',
@@ -53,11 +53,15 @@ const Portfolio = () => {
                 <div className="cards flex gap-8 flex-wrap justify-center sm:px-20">
                     {/* <!-- Card --> */}
                     {
-                        cardsData.map(({ id, name, imgPath, live_link, repo_link }) => {
+                        portfolioData.map(({ id, name, imgPath, live_link, repo_link }) => {
                             return (
-                                <div id={id} className="card w-80 shadow-gray-300 shadow-sm hover:shadow-md rounded-md flex flex-col items-center gap-3 cursor-pointer hover:shadow-white transition-all duration-200">
+                                <div id={id}
+                                    className="card w-80 shadow-gray-300 shadow-sm hover:shadow-md rounded-md flex flex-col items-center gap-3 cursor-pointer hover:shadow-white transition-all duration-200">
                                     <div className="img h-auto w-full">
-                                        <img className="hover:scale-105 hover:rounded-md rounded-tr-md rounded-tl-md h-full w-full transition-all duration-200" src={imgPath} alt="image" />
+                                        <img
+                                            className="hover:scale-105 hover:rounded-md rounded-tr-md rounded-tl-md h-full w-full transition-all duration-200"
+                                            src={imgPath} alt="image"
+                                        />
                                     </div>
                                     <div className="w-full title text-3xl font-semibold text-center">{name}</div>
                                     <div className="links w-full flex p-3 gap-5 justify-between">
