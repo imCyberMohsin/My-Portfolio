@@ -67,8 +67,8 @@ const Home = () => {
 
                 {/* <!-- Right --> */}
                 <div className="right">
-                    <div className="rightImage bg-white w-72 h-72 sm:w-96 sm:h-96 rounded-lg overflow-hidden">
-                        <img src="../images/profile2.png" alt="img" className="rounded-lg object-cover w-full h-full cursor-pointer p-[1px]" />
+                    <div className="rightImage bg-white w-72 h-72 sm:w-96 sm:h-96 rounded-2xl overflow-hidden">
+                        <img src="../images/profile2.png" alt="img" className="rounded-2xl object-cover w-full h-full cursor-pointer p-[1px]" />
                     </div>
                 </div>
             </div>
