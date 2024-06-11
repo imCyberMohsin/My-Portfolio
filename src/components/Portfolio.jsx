@@ -6,14 +6,14 @@ const Portfolio = () => {
             id: 0,
             name: 'Food Delivery',
             imgPath: '../../images/projects/food.png',
-            live_link: 'https://attendance-system-whdl.onrender.com',
+            live_link: 'https://food-time-6i7q.onrender.com',
             repo_link: 'https://github.com/imCyberMohsin/Food-Delivery-App.git',
         },
         {
             id: 1,
             name: 'Attendance System',
             imgPath: '../../images/projects/attendance.png',
-            live_link: 'https://faithful-cyan-gopher.cyclic.app',
+            live_link: 'https://attendance-system-whdl.onrender.com',
             repo_link: 'https://github.com/imCyberMohsin/Attendance-System_NodeJS.git'
         },
         {
