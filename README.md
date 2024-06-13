@@ -7,3 +7,5 @@
 ## Features Implemented
 - React Router
 - Working Form using getform.io
+- Top Loading bar
+- Skeleton Loading

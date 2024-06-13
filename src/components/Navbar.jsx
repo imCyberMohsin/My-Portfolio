@@ -1,10 +1,27 @@
 //! Navbar
-import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { NavLink, useLocation } from 'react-router-dom'
 import { FaBars, FaTimes } from 'react-icons/fa'
+import LoadingBar from 'react-top-loading-bar'
+
 
 const Navbar = () => {
     const [nav, setNav] = useState(false);
+    const [progress, setProgress] = useState(0);
+    const location = useLocation();
+
+    useEffect(() => {
+        setProgress(30);
+        const timeout1 = setTimeout(() => setProgress(60), 100);
+        const timeout2 = setTimeout(() => setProgress(90), 900);
+        const timeout3 = setTimeout(() => setProgress(100), 1200);
+
+        return () => {
+            clearTimeout(timeout1);
+            clearTimeout(timeout2);
+            clearTimeout(timeout3);
+        };
+    }, [location]);
 
     const links = [
         {
@@ -31,6 +48,8 @@ const Navbar = () => {
 
     return (
         <>
+            <LoadingBar color='gray' progress={progress}
+                onLoaderFinished={() => setProgress(0)} />
             <nav className="bg-white border-gray-200 dark:bg-[#1f1f1f] sticky top-0 w-full">
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                     <NavLink
