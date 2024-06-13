@@ -50,7 +50,7 @@ const Skills = () => {
         <>
             {/* <!--! Skills  --> */}
             <div id="skills" className="skills w-full sm:min-h-screen text-white bg-[#1f1f1f] flex flex-col items-center p-6 gap-8 px-6 md:px-20">
-                <div className="mt-12">
+                <div className="mt-7">
                     <h1 className="text-white text-4xl md:text-5xl font-bold">Skills</h1>
                 </div>
 
