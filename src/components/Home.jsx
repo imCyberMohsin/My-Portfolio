@@ -32,7 +32,7 @@ const Home = () => {
         <>
             {/* <!--! Home --> */}
             <div id="Home" name="Home"
-                className="Home w-full h-screen bg-[#1f1f1f] flex flex-col sm:flex-row justify-center items-center gap-5 sm:gap-8">
+                className="Home w-full min-h-screen pt-3 pb-8 bg-[#1f1f1f] flex flex-col sm:flex-row justify-center items-center gap-5 sm:gap-8">
                 {/* <!-- Left --> */}
                 <div className="left sm:w-2/5 w-4/5 text-white flex flex-col sm:justify-start sm:items-start items-center gap-4">
                     <div>

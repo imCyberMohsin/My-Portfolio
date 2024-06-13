@@ -4,8 +4,8 @@ const Contact = () => {
     return (
         <>
             {/* <!--! Contact Form --> */}
-            <div id="contact" className="contactMe w-full h-screen bg-[#1f1f1f]">
-                <form action="https://getform.io/f/wbrkzvwa" method="post" className="w-full max-w-md mx-auto p-5 bg-[#1f1f1f] text-white">
+            <div id="contact" className="contactMe w-full min-h-screen bg-[#1f1f1f]">
+                <form action="https://getform.io/f/wbrkzvwa" method="post" className="w-full max-w-md mx-auto p-6 bg-[#1f1f1f] text-white">
                     <h1 className="text-4xl md:text-5xl font-bold text-center mb-5 p-5">Contact Me</h1>
                     <div className="mb-5">
                         <label htmlFor="name" className="block mb-2 text-sm font-medium">Name</label>
