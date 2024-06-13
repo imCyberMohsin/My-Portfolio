@@ -1,62 +1,63 @@
-import React from 'react'
+import React from 'react';
+import { FaPalette, FaCode, FaCube, FaShoppingCart, FaBriefcase, FaTools } from 'react-icons/fa'; // Import icons from react-icons library
 
 const Services = () => {
     const boxData = [
         {
             id: 1,
             service: 'UI / UX Design',
-            info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque a possimus rerum. Nobis, perferendis. Nesciunt fuga quia reprehenderit perferendis iure.'
+            icon: <FaPalette size={40} />,
+            info: 'Create intuitive user interfaces and engaging user experiences tailored to your audience.',
         },
         {
             id: 2,
-            service: 'Dynamic Websites',
-            info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque a possimus rerum. Nobis, perferendis. Nesciunt fuga quia reprehenderit perferendis iure.'
+            service: 'Web Development',
+            icon: <FaCode size={40} />,
+            info: 'Develop responsive websites and web applications that meet your business needs and goals.',
         },
         {
             id: 3,
-            service: 'Static Websites',
-            info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque a possimus rerum. Nobis, perferendis. Nesciunt fuga quia reprehenderit perferendis iure.'
+            service: '3D Modeling',
+            icon: <FaCube size={40} />,
+            info: 'Design and develop 3D models and animations for various applications and industries.',
         },
         {
             id: 4,
-            service: 'E-commerce Websites',
-            info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque a possimus rerum. Nobis, perferendis. Nesciunt fuga quia reprehenderit perferendis iure.'
+            service: 'E-commerce Solutions',
+            icon: <FaShoppingCart size={40} />,
+            info: 'Build scalable e-commerce platforms with seamless shopping experiences and secure transactions.',
         },
         {
             id: 5,
-            service: 'Portfolio Websites',
-            info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque a possimus rerum. Nobis, perferendis. Nesciunt fuga quia reprehenderit perferendis iure.'
+            service: 'Digital Marketing',
+            icon: <FaBriefcase size={40} />,
+            info: 'Craft effective digital marketing strategies to grow your brand and reach your target audience.',
         },
         {
             id: 6,
-            service: 'Project Building',
-            info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque a possimus rerum. Nobis, perferendis. Nesciunt fuga quia reprehenderit perferendis iure.'
+            service: 'IT Consulting',
+            icon: <FaTools size={40} />,
+            info: 'Provide expert IT consulting services to optimize your business operations and technology.',
         },
-    ]
+    ];
 
     return (
-        <>
-            {/* <!--! Services --> */}
-            <div id="services" className="services min-h-screen w-full bg-[#1f1f1f] p-6 px-20">
-                <h1 className="text-white text-4xl font-bold text-center py-10 sm:py-8 underline underline-offset-8">Services</h1>
-                <div className="">
-                    {/* <!-- Services Box --> */}
-                    <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-10 text-white sm:m-10">
-                        {
-                            boxData.map(({ id, service, info }) => {
-                                return (
-                                    <div key={id} className="box min-h-1 rounded-lg p-5 cursor-pointer shadow-sm shadow-gray-400 hover:shadow-white hover:shadow-md transition-all duration-200">
-                                        <h1 className="text-3xl py-2 font-semibold">{service}</h1>
-                                        <p className="text-justify">{info}</p>
-                                    </div>
-                                )
-                            })
-                        }
-                    </div>
+        <section id="services" className="min-h-screen bg-[#1f1f1f] text-white py-12 pb-10 px-6 md:px-20">
+            <div className="max-w-6xl mx-auto">
+                <h1 className="text-4xl md:text-5xl font-bold text-center mb-8 md:mb-12">Our Services</h1>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    {boxData.map(({ id, service, icon, info }) => (
+                        // Box
+                        <div key={id} className="bg-[#2f2f2f] text-center rounded-lg p-8 hover:bg-[#3f3f3f] shadow-xl transition duration-300 ease-in-out">
+                            <div className="flex items-center justify-center mb-6">{icon}</div>
+                            <h2 className="text-2xl font-semibold mb-4">{service}</h2>
+                            <p className="text-gray-300">{info}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
-        </>
-    )
-}
+        </section>
+    );
+};
 
-export default Services
+export default Services;

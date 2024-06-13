@@ -6,7 +6,7 @@ const Contact = () => {
             {/* <!--! Contact Form --> */}
             <div id="contact" className="contactMe w-full h-screen bg-[#1f1f1f]">
                 <form action="https://getform.io/f/wbrkzvwa" method="post" className="w-full max-w-md mx-auto p-5 bg-[#1f1f1f] text-white">
-                    <h1 className="text-4xl font-bold p-5 text-center underline underline-offset-8">Contact Me</h1>
+                    <h1 className="text-4xl md:text-5xl font-bold text-center mb-5 p-5">Contact Me</h1>
                     <div className="mb-5">
                         <label htmlFor="name" className="block mb-2 text-sm font-medium">Name</label>
                         <input type="text" id="name" name="name" className="bg-transparent border outline-none focus:ring-4 border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:placeholder-gray-400  duration-200" placeholder="Full Name" required />

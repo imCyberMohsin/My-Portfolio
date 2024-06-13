@@ -44,9 +44,9 @@ const Portfolio = () => {
             {/* <!--! Portfolio  --> */}
             <div id="portfolio"
                 name="portfolio"
-                className="portfolio w-full text-white bg-[#1f1f1f] flex flex-col items-center p-6 gap-8">
+                className="portfolio min-h-screen w-full text-white bg-[#1f1f1f] flex flex-col items-center gap-8 px-6 md:px-20">
                 <div className="sm:mt-12">
-                    <h1 className="text-white text-4xl font-bold underline underline-offset-8">Portfolio</h1>
+                    <h1 className="text-white text-4xl md:text-5xl font-bold">Portfolio</h1>
                 </div>
 
                 {/* <!-- Card wrapper --> */}
