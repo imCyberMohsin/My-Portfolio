@@ -44,8 +44,8 @@ const Portfolio = () => {
             {/* <!--! Portfolio  --> */}
             <div id="portfolio"
                 name="portfolio"
-                className="portfolio min-h-screen w-full text-white bg-[#1f1f1f] flex flex-col items-center gap-8 px-6 md:px-20">
-                <div className="sm:mt-12">
+                className="portfolio min-h-screen w-full text-white bg-[#1f1f1f] flex flex-col items-center gap-8 p-6 md:p-0 px-6 md:px-20">
+                <div className="mt-7">
                     <h1 className="text-white text-4xl md:text-5xl font-bold">Portfolio</h1>
                 </div>
 
