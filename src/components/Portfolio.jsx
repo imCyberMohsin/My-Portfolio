@@ -55,7 +55,7 @@ const Portfolio = () => {
                     {
                         portfolioData.map(({ id, name, imgPath, live_link, repo_link }) => {
                             return (
-                                <div id={id}
+                                <div key={id}
                                     className="card w-80 shadow-gray-300 shadow-sm hover:shadow-md rounded-md flex flex-col items-center gap-3 cursor-pointer hover:shadow-white transition-all duration-200">
                                     <div className="img h-auto w-full">
                                         <img
