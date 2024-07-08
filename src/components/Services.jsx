@@ -17,10 +17,10 @@ const Services = () => {
         },
         {
             id: 3,
-            service: '3D Modeling',
+            service: 'WordPress Development',
             icon: <FaCube size={40} />,
-            info: 'Design and develop 3D models and animations for various applications and industries.',
-        },
+            info: 'Create and customize WordPress websites tailored to your needs, ensuring a user-friendly and dynamic online presence.',
+        },        
         {
             id: 4,
             service: 'E-commerce Solutions',
@@ -29,10 +29,10 @@ const Services = () => {
         },
         {
             id: 5,
-            service: 'Digital Marketing',
+            service: 'SEO',
             icon: <FaBriefcase size={40} />,
-            info: 'Craft effective digital marketing strategies to grow your brand and reach your target audience.',
-        },
+            info: 'Enhance your online presence with proven SEO strategies that boost search engine rankings and drive organic traffic to your website.',
+        },        
         {
             id: 6,
             service: 'IT Consulting',
