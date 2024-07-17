@@ -25,11 +25,11 @@ const Navbar = () => {
     }, [location]);
 
     const links = [
-        { id: 0, link: 'Home' },
-        { id: 1, link: 'Skills' },
-        { id: 2, link: 'Portfolio' },
-        { id: 3, link: 'Services' },
-        { id: 4, link: 'Contact' },
+        { id: 0, name: 'Home', link: '' },
+        { id: 1, name: 'Skills', link: 'skills' },
+        { id: 2, name: 'Portfolio', link: 'portfolio' },
+        { id: 3, name: 'Services', link: 'services' },
+        { id: 4, name: 'Contact', link: 'contact' },
     ]
 
     return (
@@ -39,14 +39,14 @@ const Navbar = () => {
             <nav className="bg-white border-gray-200 dark:bg-[#1f1f1f] sticky top-0 w-full">
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                     <NavLink
-                        to="/Home" className="flex items-center space-x-3 rtl:space-x-reverse">
+                        to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
                         <span className="self-center text-4xl whitespace-nowrap text-white font-signature">Mohsin Ansari</span>
                     </NavLink>
 
                     <div className="hidden w-full md:block md:w-auto" id="navbar-default">
                         <ul className="transition-all duration-200 font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 bg-transparent">
                             {
-                                links.map(({ id, link }) => {
+                                links.map(({ id, link, name }) => {
                                     return (
                                         <li key={id} className="sm:hover:underline sm:underline-offset-8 decoration-blue-600">
                                             <NavLink
@@ -54,7 +54,7 @@ const Navbar = () => {
                                                 className={({ isActive }) => `${isActive ? "underline dark:decoration-blue-600 dark:text-blue-600 text-blue-600 decoration-blue-600" : ""} block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 md:dark:hover:text-blue-600 dark:hover:text-white md:dark:hover:bg-transparent"`}
                                                 aria-current="page"
                                             >
-                                                {link}
+                                                {name}
                                             </NavLink>
                                         </li>
                                     )
