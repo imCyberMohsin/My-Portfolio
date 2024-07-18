@@ -10,39 +10,39 @@ const Portfolio = () => {
             repo_link: 'https://github.com/imCyberMohsin/Food-Delivery-App.git',
         },
         {
-            id: 1,
+            id: 2,
+            name: 'Resume Builder',
+            imgPath: '../../images/projects/resume.png',
+            live_link: 'https://resume-builder-127.netlify.app',
+            repo_link: 'https://github.com/imCyberMohsin/ATS-Friendly-Resume-Builder',
+        },
+        {
+            id: 3,
             name: 'JT Foundation NGO',
             imgPath: '../../images/projects/ngo.png',
             live_link: 'https://jt-foundation.com',
             repo_link: '',
         },
         {
-            id: 2,
+            id: 4,
             name: 'Attendance System',
             imgPath: '../../images/projects/attendance.png',
             live_link: 'https://attendance-system-whdl.onrender.com',
             repo_link: 'https://github.com/imCyberMohsin/Attendance-System_NodeJS.git'
         },
         {
-            id: 3,
+            id: 5,
             name: 'TwoGood UI',
             imgPath: '../../images/projects/twogood.png',
             live_link: 'https://imcybermohsin.github.io/twoGoodCo-clone/',
             repo_link: 'https://github.com/imCyberMohsin/twoGoodCo-clone.git',
         },
         {
-            id: 4,
+            id: 6,
             name: 'Cynthia UI',
             imgPath: '../../images/projects/cynthia.png',
             live_link: 'https://imcybermohsin.github.io/Modern_Website-1_cynthiaugwu-clone/',
             repo_link: 'https://github.com/imCyberMohsin/Modern_Website-1_cynthiaugwu-clone.git',
-        },
-        {
-            id: 5,
-            name: 'Resume Builder',
-            imgPath: '../../images/projects/resume.png',
-            live_link: '',
-            repo_link: '',
         },
     ]
 
