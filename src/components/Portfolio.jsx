@@ -34,7 +34,7 @@ const Portfolio = () => {
             id: 5,
             name: 'TwoGood UI',
             imgPath: '../../images/projects/twogood.png',
-            live_link: 'https://imcybermohsin.github.io/twoGoodCo-clone/',
+            live_link: 'https://two-good-ui.netlify.app',
             repo_link: 'https://github.com/imCyberMohsin/twoGoodCo-clone.git',
         },
         {
