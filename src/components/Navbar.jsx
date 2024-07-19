@@ -75,7 +75,7 @@ const Navbar = () => {
                     <div
                         className={`absolute top-0 left-0 w-full h-screen bg-[#1f1f1f] text-white flex flex-col items-center justify-center transform transition-transform duration-300 ease-in-out ${nav ? 'translate-x-0' : '-translate-x-full'}`}
                     >
-                        {links.map(({ id, link }) => (
+                        {links.map(({ id, link, name }) => (
                             <li key={id} className="px-4 cursor-pointer capitalize py-4 font-semibold text-lg list-none">
                                 <NavLink
                                     to={`/${link}`}
@@ -83,7 +83,7 @@ const Navbar = () => {
                                     aria-current="page"
                                     onClick={() => setNav(false)} // Close the mobile menu on link click
                                 >
-                                    {link}
+                                    {name}
                                 </NavLink>
                             </li>
                         ))}
