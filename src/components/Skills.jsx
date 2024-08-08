@@ -7,7 +7,7 @@ const Skills = () => {
             category: 'Frontend',
             info: {
                 imgPath: '../../images/skills/',
-                names: ['HTML.png', 'CSS.png', 'JS.png', 'EJS.png', 'React.png', 'Tailwind.png', 'Bootstrap.png']
+                names: ['HTML.png', 'CSS.png', 'JS.png', 'React.png', 'Tailwind.png', 'Bootstrap.png']
             }
         },
         // Backend
@@ -15,7 +15,7 @@ const Skills = () => {
             category: 'Backend',
             info: {
                 imgPath: '../../images/skills/',
-                names: ['Node.png', 'Express.png', 'MongoDB.png', 'API.png']
+                names: ['Node.png', 'Express.png', 'MongoDB.png', 'REST-API.png']
             }
         },
         // Tools
@@ -32,7 +32,6 @@ const Skills = () => {
         HTML: 'shadow-red-500 hover:shadow-red-500',
         CSS: 'shadow-blue-500 hover:shadow-blue-500',
         JS: 'shadow-yellow-500 hover:shadow-yellow-500',
-        EJS: 'shadow-red-500 hover:shadow-red-500',
         React: 'shadow-blue-500 hover:shadow-blue-500',
         Tailwind: 'shadow-teal-500 hover:shadow-teal-500',
         Bootstrap: 'shadow-purple-500 hover:shadow-purple-500',
