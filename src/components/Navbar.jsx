@@ -4,9 +4,24 @@ import { NavLink, useLocation } from 'react-router-dom'
 import LoadingBar from 'react-top-loading-bar'
 import { CiMenuFries } from "react-icons/ci";
 import { RxCross1 } from "react-icons/rx";
-
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react'
 
 const Navbar = () => {
+    useGSAP(() => {
+        gsap.fromTo(
+            ['#nav-item', '#name'],
+            { y: '-20vh', opacity: 0 },
+            {
+                y: 0,
+                opacity: 1,
+                duration: 1,
+                ease: 'power4.out',
+                stagger: 0.1
+            }
+        );
+    });
+
     const [nav, setNav] = useState(false);
     const [progress, setProgress] = useState(0);
     const location = useLocation();
@@ -40,7 +55,7 @@ const Navbar = () => {
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                     <NavLink
                         to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-                        <span className="self-center text-4xl whitespace-nowrap text-white font-signature">Mohsin Ansari</span>
+                        <span id='name' className="self-center text-4xl whitespace-nowrap text-white font-signature">Mohsin Ansari</span>
                     </NavLink>
 
                     <div className="hidden w-full md:block md:w-auto" id="navbar-default">
@@ -48,7 +63,7 @@ const Navbar = () => {
                             {
                                 links.map(({ id, link, name }) => {
                                     return (
-                                        <li key={id} className="sm:hover:underline sm:underline-offset-8 decoration-blue-600">
+                                        <li key={id} id='nav-item' className="sm:hover:underline sm:underline-offset-8 decoration-blue-600">
                                             <NavLink
                                                 to={`/${link}`}
                                                 className={({ isActive }) => `${isActive ? "underline dark:decoration-blue-600 dark:text-blue-600 text-blue-600 decoration-blue-600" : ""} block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 md:dark:hover:text-blue-600 dark:hover:text-white md:dark:hover:bg-transparent"`}
