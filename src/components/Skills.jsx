@@ -6,7 +6,7 @@ const Skills = () => {
         {
             category: 'Frontend',
             info: {
-                imgPath: '../../images/skills/',
+                imgPath: '../../images/skill_icons/',
                 names: ['HTML.png', 'CSS.png', 'JS.png', 'React.png', 'Tailwind.png', 'Bootstrap.png']
             }
         },
@@ -14,7 +14,7 @@ const Skills = () => {
         {
             category: 'Backend',
             info: {
-                imgPath: '../../images/skills/',
+                imgPath: '../../images/skill_icons/',
                 names: ['Node.png', 'Express.png', 'MongoDB.png', 'REST-API.png']
             }
         },
@@ -22,7 +22,7 @@ const Skills = () => {
         {
             category: 'Tools',
             info: {
-                imgPath: '../../images/skills/',
+                imgPath: '../../images/skill_icons/',
                 names: ['Git.png', 'Github.png', 'Linux.png', 'Postman.png']
             }
         }
