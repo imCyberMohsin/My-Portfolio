@@ -51,7 +51,7 @@ const Navbar = () => {
         <>
             <LoadingBar color='gray' progress={progress}
                 onLoaderFinished={() => setProgress(0)} />
-            <nav className="bg-white border-gray-200 dark:bg-[#1f1f1f] sticky top-0 w-full">
+            <nav className="bg-white border-gray-200 dark:bg-[#1f1f1f] sticky top-0 z-50 w-full">
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                     <NavLink
                         to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
