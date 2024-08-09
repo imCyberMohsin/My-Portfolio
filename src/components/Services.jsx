@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaPalette, FaCode, FaCube, FaShoppingCart, FaBriefcase, FaTools } from 'react-icons/fa'; // Import icons from react-icons library
+import { FaPalette, FaCode, FaServer, FaShoppingCart, FaBriefcase, FaTools } from 'react-icons/fa'; // Import icons from react-icons library
 
 const Services = () => {
     const boxData = [
@@ -17,10 +17,10 @@ const Services = () => {
         },
         {
             id: 3,
-            service: 'WordPress Development',
-            icon: <FaCube size={40} />,
-            info: 'Create and customize WordPress websites tailored to your needs, ensuring a user-friendly and dynamic online presence.',
-        },        
+            service: 'Web Hosting',
+            icon: <FaServer size={40} />,
+            info: 'Reliable and secure web hosting solutions to keep your website online and performing at its best, with 24/7 support and easy scalability.',
+        },
         {
             id: 4,
             service: 'E-commerce Solutions',
@@ -32,7 +32,7 @@ const Services = () => {
             service: 'SEO',
             icon: <FaBriefcase size={40} />,
             info: 'Enhance your online presence with proven SEO strategies that boost search engine rankings and drive organic traffic to your website.',
-        },        
+        },
         {
             id: 6,
             service: 'IT Consulting',
@@ -48,7 +48,7 @@ const Services = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                     {boxData.map(({ id, service, icon, info }) => (
                         // Box
-                        <div key={id} className="bg-[#2f2f2f] text-center rounded-lg p-8 hover:bg-[#3f3f3f] shadow-xl transition duration-300 ease-in-out">
+                        <div key={id} className="bg-[#2f2f2f] hover:bg-blue-600 text-center rounded-lg p-8 hover:scale-105 hover:-translate-y-1 shadow-xl transition duration-300 ease-in-out">
                             <div className="flex items-center justify-center mb-6">{icon}</div>
                             <h2 className="text-2xl font-semibold mb-4">{service}</h2>
                             <p className="text-gray-300">{info}</p>
