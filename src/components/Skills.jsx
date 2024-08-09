@@ -29,7 +29,7 @@ const Skills = () => {
     ];
 
     const shadowColors = {
-        HTML: 'shadow-red-500 hover:shadow-red-500',
+        HTML: 'shadow-orange-600 hover:shadow-orange-600',
         CSS: 'shadow-blue-500 hover:shadow-blue-500',
         JS: 'shadow-yellow-500 hover:shadow-yellow-500',
         React: 'shadow-blue-500 hover:shadow-blue-500',
@@ -63,7 +63,7 @@ const Skills = () => {
                                     {
                                         info.names.map((name) => {
                                             const skillName = name.split('.')[0];   // ['HTML.png'] -> ['HTML', 'png'], [0] Means 'HTML'
-                                            const shadowClass = shadowColors[skillName] || 'shadow-white';  // Accessing the Above object using key as the name, shadowColort[HTML]
+                                            const shadowClass = shadowColors[skillName] || 'shadow-white hover:shadow-white';  // Accessing the Above object using key as the name, shadowColort[HTML]
                                             return (
                                                 <div key={name} className={`w-28 flex flex-col gap-2 items-center shadow-sm hover:shadow-md rounded-md p-2 cursor-pointer ${shadowClass} hover:scale-105 transition-all duration-200`}>
                                                     <div className="img sm:w-10 sm:h-10 w-8 h-8">
