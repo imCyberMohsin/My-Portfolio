@@ -66,6 +66,7 @@ const Portfolio = () => {
                                     className="card w-80 shadow-gray-300 shadow-sm hover:shadow-md rounded-md flex flex-col items-center gap-3 cursor-pointer hover:shadow-white transition-all duration-200">
                                     <div className="img h-auto w-full">
                                         <img
+                                            loading='lazy'
                                             className="hover:scale-105 hover:rounded-md rounded-tr-md rounded-tl-md h-full w-full transition-all duration-200"
                                             src={imgPath} alt="image"
                                         />
