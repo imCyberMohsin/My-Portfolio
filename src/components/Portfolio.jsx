@@ -1,4 +1,5 @@
 import React from 'react'
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 const Portfolio = () => {
     const portfolioData = [
@@ -74,8 +75,18 @@ const Portfolio = () => {
                                     <div className="w-full title text-3xl font-semibold text-center">{name}</div>
                                     {/* <p className='px-2.5 text-justify text-gray-300'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis voluptates maiores</p> */}
                                     <div className="links w-full flex p-3 gap-5 justify-between">
-                                        <a target='_blank' href={live_link} className="font-semibold text-gray-300 hover:text-blue-600 text-base transition-all duration-200">Live Link <i className="fa-solid fa-link  text-sm"></i></a>
-                                        <a target='_blank' href={repo_link} className="font-semibold text-gray-300 hover:text-blue-600 text-base transition-all duration-200">Repo Link <i className="fa-solid fa-link  text-sm"></i></a>
+                                        <a target='_blank' rel='noopener noreferrer' href={live_link}
+                                            className="font-semibold text-gray-300 hover:-translate-y-0.5 hover:text-blue-500 text-base transition-all duration-200 flex items-center">
+                                            Live Link
+                                            <FaExternalLinkAlt className="ml-2 text-sm" />
+                                        </a>
+                                        {repo_link && (
+                                            <a target='_blank' rel='noopener noreferrer' href={repo_link}
+                                                className="font-semibold text-gray-300 hover:-translate-y-0.5 hover:text-blue-500 text-base transition-all duration-200 flex items-center">
+                                                Repo Link
+                                                <FaExternalLinkAlt className="ml-2 text-sm" />
+                                            </a>
+                                        )}
                                     </div>
                                 </div>
                             )

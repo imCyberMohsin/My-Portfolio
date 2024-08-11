@@ -10,7 +10,7 @@ import { useGSAP } from '@gsap/react'
 const Navbar = () => {
     useGSAP(() => {
         gsap.fromTo(
-            ['#nav-item', '#name'],
+            ['#nav-item', '#ownerName'],
             { y: '-20vh', opacity: 0 },
             {
                 y: 0,
@@ -55,7 +55,7 @@ const Navbar = () => {
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                     <NavLink
                         to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-                        <span id='name' className="self-center text-4xl whitespace-nowrap text-white font-signature">Mohsin Ansari</span>
+                        <span id='ownerName' className="self-center text-4xl whitespace-nowrap text-white font-signature">Mohsin Ansari</span>
                     </NavLink>
 
                     <div className="hidden w-full md:block md:w-auto" id="navbar-default">

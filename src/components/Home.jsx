@@ -1,6 +1,9 @@
 import React from 'react';
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { SiCodingninjas, SiLeetcode } from 'react-icons/si';
+import { FaXTwitter } from "react-icons/fa6";
 
 const Home = () => {
     useGSAP(() => {
@@ -22,31 +25,38 @@ const Home = () => {
             );
     });
 
+    const socialIconsCSS = "icons text-xl w-10 h-10 bg-transparent rounded-full overflow-hidden flex justify-center items-center border-2 cursor-pointer hover:bg-blue-600 shadow-sm hover:shadow-blue-600 transition-all duration-200";
     const socials = [
         {
             name: 'LinkedIn',
             href: 'https://www.linkedin.com/in/mohsin-ansari127/',
-            socialIconCSS: "icons w-10 h-10 bg-transparent rounded-full overflow-hidden flex justify-center items-center border-2 cursor-pointer hover:bg-blue-600 shadow-sm hover:shadow-blue-600 transition-all duration-200",
-            fontAwsmIcon: 'fa-linkedin',
+            socialIconCSS: socialIconsCSS,
+            IconComponent: <FaLinkedin />
         },
         {
             name: 'X',
-            href: 'https://www.linkedin.com/in/mohsin-ansari127/',
-            socialIconCSS: "icons w-10 h-10 bg-transparent rounded-full overflow-hidden flex justify-center items-center border-2 cursor-pointer hover:bg-blue-600 shadow-sm hover:shadow-blue-600 transition-all duration-200",
-            fontAwsmIcon: 'fa-x-twitter',
+            href: '#',
+            socialIconCSS: socialIconsCSS,
+            IconComponent: <FaXTwitter />
         },
         {
             name: 'Github',
             href: 'https://github.com/imCyberMohsin',
-            socialIconCSS: "icons w-10 h-10 bg-transparent rounded-full overflow-hidden flex justify-center items-center border-2 cursor-pointer hover:bg-blue-600 shadow-sm hover:shadow-blue-600 transition-all duration-200",
-            fontAwsmIcon: 'fa-github',
+            socialIconCSS: socialIconsCSS,
+            IconComponent: <FaGithub />
         },
         {
-            name: 'Discord',
-            href: 'https://www.linkedin.com/in/mohsin-ansari127/',
-            socialIconCSS: "icons w-10 h-10 bg-transparent rounded-full overflow-hidden flex justify-center items-center border-2 cursor-pointer hover:bg-blue-600 shadow-sm hover:shadow-blue-600 transition-all duration-200",
-            fontAwsmIcon: 'fa-discord',
+            name: 'CodingNinjas',
+            href: 'https://www.naukri.com/code360/profile/mdmohsin127',
+            socialIconCSS: socialIconsCSS,
+            IconComponent: <SiCodingninjas />
         },
+        // {
+        //     name: 'Leetcode',
+        //     href: 'https://www.naukri.com/code360/profile/mdmohsin127',
+        //     socialIconCSS: socialIconsCSS,
+        //     IconComponent: <SiLeetcode />
+        // },
     ]
 
     return (
@@ -69,11 +79,11 @@ const Home = () => {
                     {/* Socials */}
                     <div className="socials flex gap-5 my-1">
                         {
-                            socials.map(({ name, href, socialIconCSS, fontAwsmIcon }) => {
+                            socials.map(({ name, href, socialIconCSS, IconComponent }) => {
                                 return (
                                     <a id='social-icon' key={name} href={href} target="_blank"
                                         className={socialIconCSS}>
-                                        <i className={`fa-brands ${fontAwsmIcon} text-2xl`}></i>
+                                        {IconComponent}
                                     </a>
                                 )
                             })

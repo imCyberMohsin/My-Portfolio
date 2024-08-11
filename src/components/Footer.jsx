@@ -1,4 +1,5 @@
 import React from 'react'
+import { FaHeart } from "react-icons/fa";
 
 const Footer = () => {
     return (
@@ -82,7 +83,14 @@ const Footer = () => {
                     <div className="px-4 py-4  md:flex flex-col md:items-center md:justify-center border-t">
                         <div className="px-4 py-2 md:flex flex-col md:items-center md:justify-center">
                             <span className="text-gray-400 sm:text-center text-sm font-medium">© 2024 <a href="#">Mohsin Ansari. </a>All Rights Reserved.</span>
-                            <p className="w-full text-gray-400 mt-2 font-semibold text-sm">Designed and Developed <span className="whitespace-nowrap">with <i className="fa-solid fa-heart text-blue-500 cursor-pointer"></i> by <a target="_blank" href="https://www.linkedin.com/in/mohsin-ansari127/" className="text-blue-500 underline underline-offset-2">Mohsin Ansari</a></span></p>
+                            <p className="w-full text-gray-400 mt-2 font-semibold text-sm flex items-center justify-center">
+                                Designed and Developed with
+                                <span className="whitespace flex items-center ml-1">
+                                    <FaHeart className="text-blue-500 cursor-pointer" />
+                                    <span className="ml-1">by</span>
+                                    <a target="_blank" href="https://www.linkedin.com/in/mohsin-ansari127/" className="text-blue-500 underline underline-offset-2 ml-1">Mohsin Ansari</a>
+                                </span>
+                            </p>
                         </div>
                     </div>
                 </div>
