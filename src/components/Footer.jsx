@@ -1,94 +1,72 @@
-import React from 'react'
+import React from 'react';
 import { FaHeart } from "react-icons/fa";
 
 const Footer = () => {
+    const footerData = [
+        {
+            heading: 'Company',
+            links: [
+                { name: 'About', href: '#' },
+                { name: 'Careers', href: '#' },
+                { name: 'Brand Center', href: '#' },
+                { name: 'Blog', href: '#' },
+            ],
+        },
+        {
+            heading: 'Help center',
+            links: [
+                { name: 'Discord Server', href: '#' },
+                { name: 'Twitter', href: '#' },
+                { name: 'Facebook', href: '#' },
+                { name: 'Contact Us', href: '#' },
+            ],
+        },
+        {
+            heading: 'Legal',
+            links: [
+                { name: 'Privacy Policy', href: '#' },
+                { name: 'Licensing', href: '#' },
+                { name: 'Terms & Conditions', href: '#' },
+            ],
+        },
+        {
+            heading: 'Download',
+            links: [
+                { name: 'iOS', href: '#' },
+                { name: 'Android', href: '#' },
+                { name: 'Windows', href: '#' },
+                { name: 'MacOS', href: '#' },
+            ],
+        },
+    ];
+
     return (
         <>
             <footer className="bg-[#1f1f1f] text-center border-t">
                 <div className="mx-auto w-full max-w-screen-xl">
                     <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
-                        <div>
-                            <h2 className="mb-6 text-lg font-bold text-white uppercase">Company</h2>
-                            <ul className="text-gray-400 font-medium">
-                                <li className="mb-4">
-                                    <a href="#" className=" hover:underline hover:text-blue-500 duration-200 transition-all">About</a>
-                                </li>
-                                <li className="mb-4">
-                                    <a href="#" className="hover:underline hover:text-blue-500 duration-200 transition-all">Careers</a>
-                                </li>
-                                <li className="mb-4">
-                                    <a href="#" className="hover:underline hover:text-blue-500 duration-200 transition-all">Brand
-                                        Center</a>
-                                </li>
-                                <li className="mb-4">
-                                    <a href="#" className="hover:underline hover:text-blue-500 duration-200 transition-all">Blog</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h2 className="mb-6 text-lg font-bold text-white uppercase">Help center</h2>
-                            <ul className="text-gray-400 font-medium">
-                                <li className="mb-4">
-                                    <a href="#" className="hover:underline hover:text-blue-500 duration-200 transition-all">Discord
-                                        Server</a>
-                                </li>
-                                <li className="mb-4">
-                                    <a href="#" className="hover:underline hover:text-blue-500 duration-200 transition-all">Twitter</a>
-                                </li>
-                                <li className="mb-4">
-                                    <a href="#"
-                                        className="hover:underline hover:text-blue-500 duration-200 transition-all">Facebook</a>
-                                </li>
-                                <li className="mb-4">
-                                    <a href="#" className="hover:underline hover:text-blue-500 duration-200 transition-all">Contact
-                                        Us</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h2 className="mb-6 text-lg font-bold text-white uppercase">Legal</h2>
-                            <ul className="text-gray-400 font-medium">
-                                <li className="mb-4">
-                                    <a href="#" className="hover:underline hover:text-blue-500 duration-200 transition-all">Privacy
-                                        Policy</a>
-                                </li>
-                                <li className="mb-4">
-                                    <a href="#"
-                                        className="hover:underline hover:text-blue-500 duration-200 transition-all">Licensing</a>
-                                </li>
-                                <li className="mb-4">
-                                    <a href="#" className="hover:underline hover:text-blue-500 duration-200 transition-all">Terms &amp;
-                                        Conditions</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h2 className="mb-6 text-lg font-bold text-white uppercase">Download</h2>
-                            <ul className="text-gray-400 font-medium">
-                                <li className="mb-4">
-                                    <a href="#" className="hover:underline hover:text-blue-500 duration-200 transition-all">iOS</a>
-                                </li>
-                                <li className="mb-4">
-                                    <a href="#" className="hover:underline hover:text-blue-500 duration-200 transition-all">Android</a>
-                                </li>
-                                <li className="mb-4">
-                                    <a href="#" className="hover:underline hover:text-blue-500 duration-200 transition-all">Windows</a>
-                                </li>
-                                <li className="mb-4">
-                                    <a href="#" className="hover:underline hover:text-blue-500 duration-200 transition-all">MacOS</a>
-                                </li>
-                            </ul>
-                        </div>
+                        {footerData.map(({ heading, links, index }) => (
+                            <div key={index}>
+                                <h2 className="mb-6 text-lg font-bold text-white uppercase">{heading}</h2>
+                                <ul className="text-gray-400 font-medium">
+                                    {links.map((link, linkIndex) => (
+                                        <li className="mb-4" key={linkIndex}>
+                                            <a href={link.href} className="hover:underline hover:text-blue-500 duration-200 transition-all">{link.name}</a>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ))}
                     </div>
-                    <div className="px-4 py-4  md:flex flex-col md:items-center md:justify-center border-t">
+                    <div className="px-4 py-4 md:flex flex-col md:items-center md:justify-center border-t">
                         <div className="px-4 py-2 md:flex flex-col md:items-center md:justify-center">
                             <span className="text-gray-400 sm:text-center text-sm font-medium">© 2024 <a href="#">Mohsin Ansari. </a>All Rights Reserved.</span>
-                            <p className="w-full text-gray-400 mt-2 font-semibold text-sm flex items-center justify-center">
+                            <p className="w-full text-gray-400 mt-2 font-semibold whitespace-nowrap text-sm flex items-center justify-center">
                                 Designed and Developed with
                                 <span className="whitespace flex items-center ml-1">
                                     <FaHeart className="text-blue-500 cursor-pointer" />
                                     <span className="ml-1">by</span>
-                                    <a target="_blank" href="https://www.linkedin.com/in/mohsin-ansari127/" className="text-blue-500 underline underline-offset-2 ml-1">Mohsin Ansari</a>
+                                    <a target="_blank" href="https://www.linkedin.com/in/mohsin-ansari127/" className="text-blue-500 whitespace-nowrap underline underline-offset-2 ml-1">Mohsin Ansari</a>
                                 </span>
                             </p>
                         </div>
@@ -96,7 +74,7 @@ const Footer = () => {
                 </div>
             </footer>
         </>
-    )
+    );
 }
 
-export default Footer
+export default Footer;

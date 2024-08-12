@@ -65,8 +65,8 @@ const Home = () => {
                         <h2 className="name typing-text text-blue-500 text-xl sm:text-3xl font-semibold">Fullstack Web Developer</h2>
                     </div>
 
-                    <p id='para' className="sm:w-4/5 sm:text-lg text-gray-300 text-justify">I'm Mohsin, a Full Stack Developer skilled in HTML,
-                        CSS, JS, EJS, React.js, Node.js, Express.js, MongoDB, and Tailwind CSS. With a passion for crafting seamless and
+                    <p id='para' className="sm:w-4/5 sm:text-lg text-gray-300 text-justify">I'm a MERN Stack Developer skilled in HTML,
+                        CSS, JS, React.js, Node.js, Express.js, MongoDB, and Tailwind CSS. With a passion for crafting seamless and
                         visually appealing web applications, I specialize in creating dynamic and user-friendly experiences. Let's
                         collaborate and turn your ideas into reality!</p>
 
@@ -92,7 +92,7 @@ const Home = () => {
                 </div>
 
                 {/* <!-- Right --> */}
-                <div className="right">
+                <div className="right pointer-events-none">
                     <div className="rightImage bg-white w-72 h-72 sm:w-96 sm:h-96 rounded-2xl overflow-hidden">
                         <img src="../images/profile2.png" alt="img" className="rounded-2xl object-cover w-full h-full cursor-pointer p-[1px]" />
                     </div>
