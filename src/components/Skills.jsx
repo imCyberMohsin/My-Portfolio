@@ -28,7 +28,7 @@ const Skills = () => {
                                             return (
                                                 <div key={name} className={`w-28 flex flex-col gap-2 items-center shadow-sm hover:shadow-lg rounded-md p-2 cursor-pointer ${shadowClass} hover:scale-105 transition-all duration-200`}>
                                                     <div className="img sm:w-10 sm:h-10 w-8 h-8">
-                                                        <img src={`${info.imgPath}${name}`} alt="x" />
+                                                        <img loading='lazy' src={`${info.imgPath}${name}`} alt="Skill Icon" />
                                                     </div>
                                                     <p className="font-semibold">{name.split('.')[0]}</p>
                                                 </div>
