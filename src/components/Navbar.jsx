@@ -56,10 +56,10 @@ const Navbar = () => {
                             {
                                 navLinks.map(({ id, link, name }) => {
                                     return (
-                                        <li key={id} id='nav-item' className="sm:hover:underline sm:underline-offset-8 decoration-blue-600">
+                                        <li key={id} id='nav-item' className="sm:hover:underline sm:underline-offset-8 decoration-primary">
                                             <NavLink
                                                 to={`/${link}`}
-                                                className={({ isActive }) => `${isActive ? "underline dark:decoration-blue-600 dark:text-blue-600 text-blue-600 decoration-blue-600" : ""} block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 md:dark:hover:text-blue-600 dark:hover:text-white md:dark:hover:bg-transparent"`}
+                                                className={({ isActive }) => `${isActive ? "underline dark:decoration-primary dark:text-primary text-primary decoration-primary" : ""} block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0 md:dark:hover:text-primary dark:hover:text-white md:dark:hover:bg-transparent"`}
                                                 aria-current="page"
                                             >
                                                 {name}
@@ -87,7 +87,7 @@ const Navbar = () => {
                             <li key={id} className="px-4 cursor-pointer capitalize py-4 font-semibold text-lg list-none">
                                 <NavLink
                                     to={`/${link}`}
-                                    className={({ isActive }) => `${isActive ? "underline underline-offset-2 dark:text-blue-600 text-blue-600 decoration-blue-600" : ""} block py-2 px-3 text-white hover:text-blue-600 hover:underline underline-offset-2`}
+                                    className={({ isActive }) => `${isActive ? "underline underline-offset-2 dark:text-primary text-primary decoration-primary" : ""} block py-2 px-3 text-white hover:text-primary hover:underline underline-offset-2`}
                                     aria-current="page"
                                     onClick={() => setNav(false)} // Close the mobile menu on link click
                                 >

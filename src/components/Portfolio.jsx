@@ -47,13 +47,13 @@ const Portfolio = () => {
 
                                     <div className="links w-full flex p-3 gap-5 justify-between">
                                         <a target='_blank' rel='noopener noreferrer' href={live_link}
-                                            className="font-semibold text-gray-300 hover:-translate-y-0.5 hover:text-blue-500 text-base transition-all duration-200 flex items-center">
+                                            className="font-semibold text-gray-300 hover:-translate-y-0.5 hover:text-primary text-base transition-all duration-200 flex items-center">
                                             Live Link
                                             <FaExternalLinkAlt className="ml-2 text-sm" />
                                         </a>
                                         {repo_link && (
                                             <a target='_blank' rel='noopener noreferrer' href={repo_link}
-                                                className="font-semibold text-gray-300 hover:-translate-y-0.5 hover:text-blue-500 text-base transition-all duration-200 flex items-center">
+                                                className="font-semibold text-gray-300 hover:-translate-y-0.5 hover:text-primary text-base transition-all duration-200 flex items-center">
                                                 Repo Link
                                                 <FaExternalLinkAlt className="ml-2 text-sm" />
                                             </a>

@@ -14,7 +14,7 @@ const Footer = () => {
                                 <ul className="text-gray-400 font-medium">
                                     {section.links.map((link, linkIndex) => (
                                         <li className="mb-4" key={linkIndex}>
-                                            <a href={link.href} className="hover:underline hover:text-blue-500 duration-200 transition-all">{link.name}</a>
+                                            <a href={link.href} className="hover:underline underline-offset-4 hover:text-primary duration-200 transition-all">{link.name}</a>
                                         </li>
                                     ))}
                                 </ul>
@@ -27,9 +27,9 @@ const Footer = () => {
                             <p className="w-full text-gray-400 mt-2 font-semibold whitespace-nowrap text-sm flex items-center justify-center">
                                 Designed and Developed with
                                 <span className="whitespace flex items-center ml-1">
-                                    <FaHeart className="text-blue-500 cursor-pointer" />
+                                    <FaHeart className="text-primary cursor-pointer" />
                                     <span className="ml-1">by</span>
-                                    <a target="_blank" href="https://www.linkedin.com/in/mohsin-ansari127/" className="text-blue-500 whitespace-nowrap underline underline-offset-2 ml-1">Mohsin Ansari</a>
+                                    <a target="_blank" href="https://www.linkedin.com/in/mohsin-ansari127/" className="text-primary whitespace-nowrap underline underline-offset-2 ml-1">Mohsin Ansari</a>
                                 </span>
                             </p>
                         </div>

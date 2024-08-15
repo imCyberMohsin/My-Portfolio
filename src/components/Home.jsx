@@ -34,12 +34,12 @@ const Home = () => {
         <>
             {/* <!--! Home --> */}
             <div id="Home" name="Home"
-                className="Home w-full min-h-screen pt-3 pb-8 bg-[#1f1f1f] flex flex-col sm:flex-row justify-center items-center gap-5 sm:gap-8">
+                className="Home w-full min-h-screen pt-3 pb-8 bg-[#1f1f1f] flex flex-col-reverse sm:flex-row justify-center items-center gap-5 sm:gap-8">
                 {/* <!-- Left --> */}
                 <div className="left sm:w-2/5 w-4/5 text-white flex flex-col sm:justify-start sm:items-start items-center gap-4">
                     <div>
                         <h1 className="name text-5xl sm:text-6xl font-semibold">I'm Mohsin</h1>
-                        <h2 className="name typing-text text-blue-500 text-xl sm:text-3xl font-semibold">{jobTitle} <Cursor /></h2>
+                        <h2 className="name typing-text text-primary text-xl sm:text-3xl font-semibold">{jobTitle} <Cursor /></h2>
                     </div>
 
                     <p id='para' className="sm:w-4/5 sm:text-lg text-gray-300 text-justify">I'm a MERN Stack Developer skilled in HTML,
@@ -53,7 +53,7 @@ const Home = () => {
                             socials.map(({ name, href, IconComponent }) => {
                                 return (
                                     <a id='social-icon' key={name} href={href} target="_blank"
-                                        className="icons text-xl w-10 h-10 bg-transparent rounded-full overflow-hidden flex justify-center items-center border-2 cursor-pointer hover:bg-blue-600 shadow-sm hover:shadow-blue-600 hover:scale-110 transition-all duration-200">
+                                        className="icons text-xl w-10 h-10 bg-transparent rounded-full overflow-hidden flex justify-center items-center border-2 cursor-pointer hover:bg-primary shadow-sm hover:shadow-primary hover:scale-110 transition-all duration-200">
                                         <IconComponent />
                                     </a>
                                 )
@@ -62,7 +62,7 @@ const Home = () => {
                     </div>
 
                     <a id='download-btn' href="../../resume.pdf" download
-                        className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-semibold rounded-full text-lg px-6 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-white transition-all duration-150"
+                        className="text-white bg-primaryDark dark:bg-primaryDark focus:ring-4 focus:ring-blue-300 font-semibold rounded-full text-lg px-6 py-2.5 me-2 mb-2 focus:outline-none dark:focus:ring-white transition-all duration-150"
                     >
                         Download My Resume
                     </a>
@@ -70,8 +70,8 @@ const Home = () => {
 
                 {/* <!-- Right --> */}
                 <div className="right pointer-events-none">
-                    <div className="rightImage bg-white w-72 h-72 sm:w-96 sm:h-96 rounded-2xl overflow-hidden">
-                        <img src="../images/profile2.png" alt="img" className="rounded-2xl object-cover w-full h-full cursor-pointer p-[1px]" />
+                    <div className="rightImage bg-white w-72 h-72 sm:w-96 sm:h-96 rounded-full sm:rounded-2xl overflow-hidden">
+                        <img src="../images/profile2.png" alt="img" className="rounded-2xl object-cover w-full h-full cursor-pointer sm:p-[1px]" />
                     </div>
                 </div>
             </div>

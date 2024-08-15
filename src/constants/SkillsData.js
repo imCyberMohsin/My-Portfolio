@@ -22,6 +22,14 @@ export const linksAndNames = [
             imgPath: '../../images/skill_icons/',
             names: ['Git.png', 'Github.png', 'Linux.png', 'Postman.png']
         }
+    },
+    // DSA
+    {
+        category: 'Data Structures',
+        info: {
+            imgPath: '../../images/skill_icons/',
+            names: ['Arrays.png', 'Linked Lists.png', 'Stacks.png', 'Queues.png', 'Trees.png']
+        }
     }
 ];
 

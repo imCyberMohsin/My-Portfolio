@@ -10,12 +10,12 @@ const Services = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                     {servicesData.map(({ id, service, icon: Icon, info }) => (
                         // Box
-                        <div key={id} className="bg-[#2f2f2f] hover:bg-blue-600 text-center rounded-lg p-8 hover:scale-105 hover:-translate-y-1 shadow-xl transition duration-300 ease-in-out">
+                        <div key={id} className="bg-[#2f2f2f] border border-primary text-center rounded-xl p-8 shadow-md hover:shadow-lg hover:shadow-primary transition duration-300 ease-in-out">
                             <div className="flex items-center justify-center mb-6">
                                 <Icon size={40} />
                             </div>
                             <h2 className="text-2xl font-semibold mb-4">{service}</h2>
-                            <p className="text-gray-300">{info}</p>
+                            <p className="text-gray-300 hover:text-white">{info}</p>
                         </div>
                     ))}
                 </div>
