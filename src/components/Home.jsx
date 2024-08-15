@@ -4,6 +4,7 @@ import { useGSAP } from '@gsap/react'
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { SiCodingninjas, SiLeetcode } from 'react-icons/si';
 import { FaXTwitter } from "react-icons/fa6";
+import { useTypewriter, Cursor } from 'react-simple-typewriter'
 
 const Home = () => {
     useGSAP(() => {
@@ -53,6 +54,12 @@ const Home = () => {
         // },
     ]
 
+    // Typewriter
+    const [jobTitle] = useTypewriter({
+        words: ['MERN Stack Developer', ''],
+        loop: {},
+    })
+
     return (
         <>
             {/* <!--! Home --> */}
@@ -62,7 +69,8 @@ const Home = () => {
                 <div className="left sm:w-2/5 w-4/5 text-white flex flex-col sm:justify-start sm:items-start items-center gap-4">
                     <div>
                         <h1 className="name text-5xl sm:text-6xl font-semibold">I'm Mohsin</h1>
-                        <h2 className="name typing-text text-blue-500 text-xl sm:text-3xl font-semibold">Fullstack Web Developer</h2>
+                        <h2 className="name typing-text text-blue-500 text-xl sm:text-3xl font-semibold">{jobTitle} <Cursor /></h2>
+                        
                     </div>
 
                     <p id='para' className="sm:w-4/5 sm:text-lg text-gray-300 text-justify">I'm a MERN Stack Developer skilled in HTML,
