@@ -10,7 +10,7 @@ const Skills = () => {
                 <div className="mt-7">
                     <h1 className="text-4xl md:text-5xl font-bold relative inline-block">
                         <span className="relative z-10">Skills</span>
-                        <span className="absolute inset-x-0 bottom-0 w-full h-1 bg-gradient-to-r from-primary to-accent opacity-50 rounded-full"></span>
+                        {/* <span className="absolute inset-x-0 bottom-0 w-full h-1 bg-gradient-to-r from-primary to-accent opacity-50 rounded-full"></span> */}
                     </h1>
                 </div>
 
