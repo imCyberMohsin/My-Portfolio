@@ -6,6 +6,7 @@ import { CiMenuFries } from "react-icons/ci";
 import { RxCross1 } from "react-icons/rx";
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
+import { navLinks } from '../constants/NavbarData'
 
 const Navbar = () => {
     useGSAP(() => {
@@ -39,14 +40,6 @@ const Navbar = () => {
         };
     }, [location]);
 
-    const links = [
-        { id: 0, name: 'Home', link: '' },
-        { id: 1, name: 'Skills', link: 'skills' },
-        { id: 2, name: 'Portfolio', link: 'portfolio' },
-        { id: 3, name: 'Services', link: 'services' },
-        { id: 4, name: 'Contact', link: 'contact' },
-    ]
-
     return (
         <>
             <LoadingBar color='gray' progress={progress}
@@ -61,7 +54,7 @@ const Navbar = () => {
                     <div className="hidden w-full md:block md:w-auto" id="navbar-default">
                         <ul className="transition-all duration-200 font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 bg-transparent">
                             {
-                                links.map(({ id, link, name }) => {
+                                navLinks.map(({ id, link, name }) => {
                                     return (
                                         <li key={id} id='nav-item' className="sm:hover:underline sm:underline-offset-8 decoration-blue-600">
                                             <NavLink
@@ -90,7 +83,7 @@ const Navbar = () => {
                     <div
                         className={`absolute top-0 left-0 w-full h-screen bg-[#1f1f1f] text-white flex flex-col items-center justify-center transform transition-transform duration-300 ease-in-out ${nav ? 'translate-x-0' : '-translate-x-full'}`}
                     >
-                        {links.map(({ id, link, name }) => (
+                        {navLinks.map(({ id, link, name }) => (
                             <li key={id} className="px-4 cursor-pointer capitalize py-4 font-semibold text-lg list-none">
                                 <NavLink
                                     to={`/${link}`}

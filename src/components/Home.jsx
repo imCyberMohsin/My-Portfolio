@@ -1,10 +1,8 @@
 import React from 'react';
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
-import { SiCodingninjas, SiLeetcode } from 'react-icons/si';
-import { FaXTwitter } from "react-icons/fa6";
 import { useTypewriter, Cursor } from 'react-simple-typewriter'
+import { socials } from '../constants/HomeData'
 
 const Home = () => {
     useGSAP(() => {
@@ -26,34 +24,6 @@ const Home = () => {
             );
     });
 
-    const socials = [
-        {
-            name: 'LinkedIn',
-            href: 'https://www.linkedin.com/in/mohsin-ansari127/',
-            IconComponent: <FaLinkedin />
-        },
-        {
-            name: 'X',
-            href: '#',
-            IconComponent: <FaXTwitter />
-        },
-        {
-            name: 'Github',
-            href: 'https://github.com/imCyberMohsin',
-            IconComponent: <FaGithub />
-        },
-        {
-            name: 'CodingNinjas',
-            href: 'https://www.naukri.com/code360/profile/mdmohsin127',
-            IconComponent: <SiCodingninjas />
-        },
-        // {
-        //     name: 'Leetcode',
-        //     href: 'https://www.naukri.com/code360/profile/mdmohsin127',
-        //     IconComponent: <SiLeetcode />
-        // },
-    ]
-
     // Typewriter
     const [jobTitle] = useTypewriter({
         words: ['MERN Stack Developer', ''],
@@ -70,7 +40,6 @@ const Home = () => {
                     <div>
                         <h1 className="name text-5xl sm:text-6xl font-semibold">I'm Mohsin</h1>
                         <h2 className="name typing-text text-blue-500 text-xl sm:text-3xl font-semibold">{jobTitle} <Cursor /></h2>
-                        
                     </div>
 
                     <p id='para' className="sm:w-4/5 sm:text-lg text-gray-300 text-justify">I'm a MERN Stack Developer skilled in HTML,
@@ -85,7 +54,7 @@ const Home = () => {
                                 return (
                                     <a id='social-icon' key={name} href={href} target="_blank"
                                         className="icons text-xl w-10 h-10 bg-transparent rounded-full overflow-hidden flex justify-center items-center border-2 cursor-pointer hover:bg-blue-600 shadow-sm hover:shadow-blue-600 hover:scale-110 transition-all duration-200">
-                                        {IconComponent}
+                                        <IconComponent />
                                     </a>
                                 )
                             })

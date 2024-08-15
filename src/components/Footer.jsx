@@ -1,55 +1,18 @@
 import React from 'react';
 import { FaHeart } from "react-icons/fa";
+import { footerData } from '../constants/FooterData'
 
 const Footer = () => {
-    const footerData = [
-        {
-            heading: 'Company',
-            links: [
-                { name: 'About', href: '#' },
-                { name: 'Careers', href: '#' },
-                { name: 'Brand Center', href: '#' },
-                { name: 'Blog', href: '#' },
-            ],
-        },
-        {
-            heading: 'Help center',
-            links: [
-                { name: 'Discord Server', href: '#' },
-                { name: 'Twitter', href: '#' },
-                { name: 'Facebook', href: '#' },
-                { name: 'Contact Us', href: '#' },
-            ],
-        },
-        {
-            heading: 'Legal',
-            links: [
-                { name: 'Privacy Policy', href: '#' },
-                { name: 'Licensing', href: '#' },
-                { name: 'Terms & Conditions', href: '#' },
-            ],
-        },
-        {
-            heading: 'Download',
-            links: [
-                { name: 'iOS', href: '#' },
-                { name: 'Android', href: '#' },
-                { name: 'Windows', href: '#' },
-                { name: 'MacOS', href: '#' },
-            ],
-        },
-    ];
-
     return (
         <>
             <footer className="bg-[#1f1f1f] text-center border-t">
                 <div className="mx-auto w-full max-w-screen-xl">
                     <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
-                        {footerData.map(({ heading, links, index }) => (
+                        {footerData.map((section, index) => (
                             <div key={index}>
-                                <h2 className="mb-6 text-lg font-bold text-white uppercase">{heading}</h2>
+                                <h2 className="mb-6 text-lg font-bold text-white uppercase">{section.heading}</h2>
                                 <ul className="text-gray-400 font-medium">
-                                    {links.map((link, linkIndex) => (
+                                    {section.links.map((link, linkIndex) => (
                                         <li className="mb-4" key={linkIndex}>
                                             <a href={link.href} className="hover:underline hover:text-blue-500 duration-200 transition-all">{link.name}</a>
                                         </li>
