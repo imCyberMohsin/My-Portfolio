@@ -26,8 +26,12 @@ const Portfolio = () => {
                                     <div className="img h-auto w-full">
                                         <img
                                             loading='lazy'
-                                            className="hover:scale-105 hover:rounded-md rounded-tr-md rounded-tl-md h-full w-full transition-all duration-200"
+                                            className="hover:scale-105 hover:rounded-md rounded-tr-md rounded-tl-md h-full w-full opacity-0 transition-all duration-300"
                                             src={imgPath} alt="image"
+                                            onLoad={(e) => {
+                                                e.currentTarget.style.opacity = 1;
+                                                e.currentTarget.previousElementSibling.style.display = 'none';
+                                            }}
                                         />
                                     </div>
                                     <div className="w-full title text-3xl font-semibold text-center">{name}</div>

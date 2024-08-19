@@ -71,7 +71,15 @@ const Home = () => {
                 {/* <!-- Right --> */}
                 <div className="right pointer-events-none">
                     <div className="rightImage bg-white w-72 h-72 sm:w-96 sm:h-96 rounded-full sm:rounded-2xl overflow-hidden">
-                        <img src="../images/profile2.png" alt="Hero img" className="rounded-2xl object-cover w-full h-full cursor-pointer sm:p-[1px]" />
+                        <div className='bg-gray-300 rounded-2xl absolute inset-0'></div>
+                        <img src="../images/profile2.png"
+                            alt="Hero img"
+                            className="rounded-2xl object-cover w-full h-full cursor-pointer sm:p-[1px] opacity-0 transition-all duration-300"
+                            onLoad={(e) => {
+                                e.currentTarget.style.opacity = 1;
+                                e.currentTarget.previousElementSibling.style.display = 'none';
+                            }}
+                        />
                     </div>
                 </div>
             </div>

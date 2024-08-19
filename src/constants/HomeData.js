@@ -19,13 +19,13 @@ export const socials = [
         IconComponent: FaGithub
     },
     {
-        name: 'CodingNinjas',
-        href: 'https://www.naukri.com/code360/profile/mdmohsin127',
-        IconComponent: SiCodingninjas
+        name: 'Leetcode',
+        href: 'https://leetcode.com/u/Mohsin127/',
+        IconComponent: SiLeetcode
     },
     // {
-    //     name: 'Leetcode',
+    //     name: 'CodingNinjas',
     //     href: 'https://www.naukri.com/code360/profile/mdmohsin127',
-    //     IconComponent: SiLeetcode
+    //     IconComponent: SiCodingninjas
     // },
 ]
