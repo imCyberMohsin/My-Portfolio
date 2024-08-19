@@ -22,7 +22,7 @@ const Portfolio = () => {
                             const stacksArray = stacks.split(', ');
                             return (
                                 <div key={name}
-                                    className="card w-80 shadow-zinc-900 dark:shadow-gray-300 shadow-sm hover:shadow-md hover:shadow-zinc-900 dark:hover:shadow-white rounded-md flex flex-col items-center justify-between gap-3 cursor-pointer transition-all duration-200">
+                                    className="card w-80 border border-zinc-600 hover:border-zinc-400 rounded-md flex flex-col items-center justify-between gap-3 cursor-pointer transition-all duration-300">
                                     <div className="img h-auto w-full">
                                         <img
                                             loading='lazy'
@@ -34,7 +34,7 @@ const Portfolio = () => {
                                             }}
                                         />
                                     </div>
-                                    <div className="w-full title text-3xl font-semibold text-center">{name}</div>
+                                    <div className="w-full title text-3xl font-semibold text-center hover:text-accent transition-all duration-300">{name}</div>
 
                                     <div className='stacks px-1 flex justify-center flex-wrap gap-1.5'>
                                         {stacksArray.map((stack, index) => {
@@ -51,19 +51,20 @@ const Portfolio = () => {
 
                                     <div className="links w-full flex p-3 gap-5 justify-between">
                                         <a target='_blank' rel='noopener noreferrer' href={live_link}
-                                            className="font-semibold dark:text-gray-300 hover:-translate-y-0.5 hover:text-primary text-base transition-all duration-200 flex items-center">
+                                            className="font-semibold dark:text-gray-300 hover:text-accent text-base transition-all duration-200 flex items-center">
                                             Live Link
                                             <FaExternalLinkAlt className="ml-2 text-sm" />
                                         </a>
                                         {repo_link && (
                                             <a target='_blank' rel='noopener noreferrer' href={repo_link}
-                                                className="font-semibold dark:text-gray-300 hover:-translate-y-0.5 hover:text-primary text-base transition-all duration-200 flex items-center">
+                                                className="font-semibold dark:text-gray-300 hover:text-accent text-base transition-all duration-200 flex items-center">
                                                 Repo Link
                                                 <FaExternalLinkAlt className="ml-2 text-sm" />
                                             </a>
                                         )}
                                     </div>
                                 </div>
+                                
                             )
                         })
                     }

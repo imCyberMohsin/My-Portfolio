@@ -47,25 +47,29 @@ const Home = () => {
                         visually appealing web applications, I specialize in creating dynamic and user-friendly experiences. Let's
                         collaborate and turn your ideas into reality!</p>
 
-                    {/* Socials */}
-                    <div className="socials flex gap-5 my-1">
-                        {
-                            socials.map(({ name, href, IconComponent }) => {
-                                return (
-                                    <a id='social-icon' key={name} href={href} target="_blank"
-                                        className="icons text-xl w-10 h-10 bg-transparent rounded-full overflow-hidden flex justify-center items-center border-2 cursor-pointer hover:bg-primary shadow-sm hover:shadow-primary hover:scale-110 transition-all duration-200">
-                                        <IconComponent />
-                                    </a>
-                                )
-                            })
-                        }
-                    </div>
+                    <div className='flex flex-col items-center'>
+                        {/* Socials */}
+                        <div className="socials flex gap-5 my-1">
+                            {
+                                socials.map(({ name, href, IconComponent }) => {
+                                    return (
+                                        <a id='social-icon' key={name} href={href} target="_blank"
+                                            className="icons text-xl w-10 h-10 bg-transparent rounded-full overflow-hidden flex justify-center items-center border-2 cursor-pointer hover:bg-primary shadow-sm hover:shadow-primary hover:scale-110 transition-all duration-200">
+                                            <IconComponent />
+                                        </a>
+                                    )
+                                })
+                            }
+                        </div>
 
-                    <a id='download-btn' href="../../resume.pdf" download
-                        className="text-white bg-primaryDark dark:bg-primaryDark focus:ring-4 focus:ring-blue-300 font-semibold rounded-full text-lg px-6 py-2.5 me-2 mb-2 focus:outline-none dark:focus:ring-white transition-all duration-150"
-                    >
-                        Download My Resume
-                    </a>
+                        {/* Download Button */}
+                        <a id='download-btn' href="../../resume.pdf" download
+                            class="group inline-block px-6 py-3 font-semibold uppercase text-center text-white tracking-wider bg-primaryDark hover:bg-accent rounded-full transition-all duration-200 ease-out hover:text-white hover:no-underline mt-3 w-full md:w-auto"
+                            role="button"
+                        >
+                            Download My Resume
+                        </a>
+                    </div>
                 </div>
 
                 {/* <!-- Right --> */}

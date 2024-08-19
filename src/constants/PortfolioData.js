@@ -22,6 +22,13 @@ export const portfolioData = [
         repo_link: 'https://github.com/imCyberMohsin/ATS-Friendly-Resume-Builder',
     },
     {
+        name: 'Recipe Finder',
+        stacks: 'React.js, Tailwind CSS, DaisyUI, Skeleton-loading, API-handling',
+        imgPath: '../../images/projects/recipe.png',
+        live_link: 'https://myrecipefinder127.netlify.app/',
+        repo_link: 'https://github.com/imCyberMohsin/Recipe-Finder.git',
+    },
+    {
         name: 'Apple Revamped',
         stacks: 'React.js, Tailwind, GSAP',
         imgPath: '../../images/projects/apple.png',
