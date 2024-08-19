@@ -34,15 +34,15 @@ const Home = () => {
         <>
             {/* <!--! Home --> */}
             <div id="Home" name="Home"
-                className="Home w-full min-h-screen pt-3 pb-8 bg-[#1f1f1f] flex flex-col-reverse sm:flex-row justify-center items-center gap-5 sm:gap-8">
+                className="Home w-full min-h-screen pt-3 pb-8 bg-gray-200 dark:bg-zinc-900 flex flex-col-reverse sm:flex-row justify-center items-center gap-5 sm:gap-8">
                 {/* <!-- Left --> */}
-                <div className="left sm:w-2/5 w-4/5 text-white flex flex-col sm:justify-start sm:items-start items-center gap-4">
+                <div className="left sm:w-2/5 w-4/5 text-zinc-900 dark:text-white flex flex-col sm:justify-start sm:items-start items-center gap-4">
                     <div>
                         <h1 className="name text-5xl sm:text-6xl font-semibold">I'm Mohsin</h1>
                         <h2 className="name typing-text text-primary text-xl sm:text-3xl font-semibold">{jobTitle} <Cursor /></h2>
                     </div>
 
-                    <p id='para' className="sm:w-4/5 sm:text-lg text-gray-300 text-justify">I'm a MERN Stack Developer skilled in HTML,
+                    <p id='para' className="sm:w-4/5 sm:text-lg text-zinc-900 dark:text-gray-300 text-justify">I'm a MERN Stack Developer skilled in HTML,
                         CSS, JS, React.js, Node.js, Express.js, MongoDB, and Tailwind CSS. With a passion for crafting seamless and
                         visually appealing web applications, I specialize in creating dynamic and user-friendly experiences. Let's
                         collaborate and turn your ideas into reality!</p>

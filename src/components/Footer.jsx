@@ -5,13 +5,13 @@ import { footerData } from '../constants/FooterData'
 const Footer = () => {
     return (
         <>
-            <footer className="bg-[#1f1f1f] text-center border-t">
+            <footer className="bg-gray-200 dark:bg-zinc-900 text-center border-t">
                 <div className="mx-auto w-full max-w-screen-xl">
                     <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
                         {footerData.map((section, index) => (
                             <div key={index}>
-                                <h2 className="mb-6 text-lg font-bold text-white uppercase">{section.heading}</h2>
-                                <ul className="text-gray-400 font-medium">
+                                <h2 className="mb-6 text-lg font-bold dark:text-white uppercase">{section.heading}</h2>
+                                <ul className="dark:text-gray-400 font-medium">
                                     {section.links.map((link, linkIndex) => (
                                         <li className="mb-4" key={linkIndex}>
                                             <a href={link.href} className="hover:underline underline-offset-4 hover:text-primary duration-200 transition-all">{link.name}</a>
@@ -23,8 +23,8 @@ const Footer = () => {
                     </div>
                     <div className="px-4 py-4 md:flex flex-col md:items-center md:justify-center border-t">
                         <div className="px-4 py-2 md:flex flex-col md:items-center md:justify-center">
-                            <span className="text-gray-400 sm:text-center text-sm font-medium">© 2024 <a href="#">Mohsin Ansari. </a>All Rights Reserved.</span>
-                            <p className="w-full text-gray-400 mt-2 font-semibold whitespace-nowrap text-sm flex items-center justify-center">
+                            <span className="dark:text-gray-400 sm:text-center text-sm font-medium">© 2024 <a href="#">Mohsin Ansari. </a>All Rights Reserved.</span>
+                            <p className="w-full dark:text-gray-400 mt-2 font-semibold whitespace-nowrap text-sm flex items-center justify-center">
                                 Designed and Developed with
                                 <span className="whitespace flex items-center ml-1">
                                     <FaHeart className="text-primary cursor-pointer" />

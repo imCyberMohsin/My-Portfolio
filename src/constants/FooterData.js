@@ -1,37 +1,34 @@
 export const footerData = [
     {
-        heading: 'Company',
+        heading: 'About Me',
         links: [
-            { name: 'About', href: '#' },
-            { name: 'Careers', href: '#' },
-            { name: 'Brand Center', href: '#' },
-            { name: 'Blog', href: '#' },
+            { name: 'Portfolio', href: '#' },
+            { name: 'Skills', href: '#' },
+            { name: 'Projects', href: '#' },
+            { name: 'Resume', href: '#' },
         ],
     },
     {
-        heading: 'Help center',
+        heading: 'Connect',
         links: [
-            { name: 'Discord Server', href: '#' },
+            { name: 'LinkedIn', href: 'https://www.linkedin.com/in/mohsin-ansari127/' },
+            { name: 'GitHub', href: 'https://github.com/your-username' },
             { name: 'Twitter', href: '#' },
-            { name: 'Facebook', href: '#' },
-            { name: 'Contact Us', href: '#' },
+            { name: 'Email', href: 'mailto:your-email@example.com' },
+        ],
+    },
+    {
+        heading: 'Support',
+        links: [
+            { name: 'FAQs', href: '#' },
+            { name: 'Contact Me', href: '#' },
         ],
     },
     {
         heading: 'Legal',
         links: [
             { name: 'Privacy Policy', href: '#' },
-            { name: 'Licensing', href: '#' },
-            { name: 'Terms & Conditions', href: '#' },
-        ],
-    },
-    {
-        heading: 'Download',
-        links: [
-            { name: 'iOS', href: '#' },
-            { name: 'Android', href: '#' },
-            { name: 'Windows', href: '#' },
-            { name: 'MacOS', href: '#' },
+            { name: 'Terms of Service', href: '#' },
         ],
     },
 ];

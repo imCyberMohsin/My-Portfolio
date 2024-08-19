@@ -6,7 +6,7 @@ const Skills = () => {
     return (
         <>
             {/* <!--! Skills  --> */}
-            <div id="skills" className="skills w-full sm:min-h-screen text-white bg-[#1f1f1f] flex flex-col items-center p-6 gap-8 px-6 md:px-20">
+            <div id="skills" className="skills w-full sm:min-h-screen text-zinc-900 dark:text-white bg-gray-200 dark:bg-zinc-900 flex flex-col items-center p-6 gap-8 px-6 md:px-20">
                 <div className="mt-7">
                     <h1 className="text-4xl md:text-5xl font-bold relative inline-block">
                         <span className="relative z-10">Skills</span>
