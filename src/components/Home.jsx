@@ -64,7 +64,7 @@ const Home = () => {
 
                         {/* Download Button */}
                         <a id='download-btn' href="../../resume.pdf" download
-                            class="group inline-block px-6 py-3 font-semibold uppercase text-center text-white tracking-wider bg-primaryDark hover:bg-accent rounded-full transition-all duration-200 ease-out hover:text-white hover:no-underline mt-3 w-full md:w-auto"
+                            className="group inline-block px-6 py-3 font-semibold uppercase text-center text-white tracking-wider bg-primaryDark hover:bg-accent rounded-full transition-all duration-200 ease-out hover:text-white hover:no-underline mt-3 w-full md:w-auto"
                             role="button"
                         >
                             Download My Resume

@@ -34,7 +34,10 @@ const Skills = () => {
                                                             className='opacity-0 transition-all duration-300'
                                                             onLoad={(e) => {
                                                                 e.currentTarget.style.opacity = 1;
-                                                                e.currentTarget.previousElementSibling.style.display = 'none';
+                                                                const previousSibling = e.currentTarget.previousElementSibling;
+                                                                if (previousSibling) {
+                                                                    previousSibling.style.display = 'none';
+                                                                }
                                                             }}
                                                         />
                                                     </div>

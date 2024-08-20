@@ -22,7 +22,7 @@ const Contact = () => {
 
                     <div className='text-center'>
                         <button type="submit"
-                            class="group inline-block px-10 py-3 font-semibold uppercase text-center text-white tracking-wider bg-primaryDark rounded-full transition-all duration-200 ease-out hover:text-white hover:no-underline mt-3 w-full md:w-auto"
+                            className="group inline-block px-10 py-3 font-semibold uppercase text-center text-white tracking-wider bg-primaryDark rounded-full transition-all duration-200 ease-out hover:text-white hover:no-underline mt-3 w-full md:w-auto"
                             role="button"
                         >
                             Submit
