@@ -11,11 +11,12 @@ const Portfolio = () => {
                 name="portfolio"
                 className="portfolio min-h-screen w-full text-zinc-900 dark:text-white bg-gray-200 dark:bg-zinc-900 flex flex-col items-center gap-8 p-6 px-6 md:px-20">
                 <div className="mt-6">
-                    <h1 className="text-4xl md:text-5xl font-bold">Portfolio</h1>
+                    <h1 className="text-4xl font-bold">Portfolio</h1>
+                    <div className='underline h-[2px] bg-primaryDark'></div>
                 </div>
 
                 {/* <!-- Card wrapper --> */}
-                <div className="cards flex gap-8 flex-wrap justify-center sm:px-20">
+                <div className="cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
                     {/* <!-- Card --> */}
                     {
                         portfolioData.map(({ name, stacks, imgPath, live_link, repo_link }) => {
@@ -67,7 +68,7 @@ const Portfolio = () => {
                                         )}
                                     </div>
                                 </div>
-                                
+
                             )
                         })
                     }

@@ -6,7 +6,10 @@ const Services = () => {
     return (
         <section id="services" className="min-h-screen bg-gray-200 dark:bg-zinc-900 text-zinc-900 dark:text-white py-12 pb-10 px-6 md:px-20">
             <div className="max-w-6xl mx-auto">
-                <h1 className="text-4xl md:text-5xl font-bold text-center mb-8 md:mb-12">Our Services</h1>
+                <div className='mb-8 md:mb-12 w-fit text-center mx-auto'>
+                    <h1 className="text-4xl font-bold text-center">Our Services</h1>
+                    <div className='underline h-[2px] bg-primaryDark'></div>
+                </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                     {servicesData.map(({ id, service, icon: Icon, info }) => (
                         // Box

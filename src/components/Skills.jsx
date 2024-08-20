@@ -7,19 +7,16 @@ const Skills = () => {
         <>
             {/* <!--! Skills  --> */}
             <div id="skills" className="skills w-full sm:min-h-screen text-zinc-900 dark:text-white bg-gray-200 dark:bg-zinc-900 flex flex-col items-center p-6 gap-8 px-6 md:px-20">
-                <div className="mt-7">
-                    <h1 className="text-4xl md:text-5xl font-bold relative inline-block">
-                        <span className="relative z-10">Skills</span>
-                        {/* <span className="absolute inset-x-0 bottom-0 w-full h-1 bg-gradient-to-r from-primary to-accent opacity-50 rounded-full"></span> */}
-                    </h1>
+                <div className="mt-6">
+                    <h1 className="text-4xl font-bold">Skills</h1>
+                    <div className='underline h-[2px] bg-primaryDark'></div>
                 </div>
-
                 {/* <!-- Mapping through each category --> */}
                 {
                     linksAndNames.map(({ category, info }) => {
                         return (
                             <div key={category} className={category.toLowerCase()}>
-                                <h1 className="text-3xl py-3 font-semibold text-center">{category}</h1>
+                                <h1 className="text-2xl text-gray-300 py-3 font-semibold text-center">{category}</h1>
                                 <div className="icons flex justify-center flex-wrap gap-8">
                                     {
                                         info.names.map((name) => {
