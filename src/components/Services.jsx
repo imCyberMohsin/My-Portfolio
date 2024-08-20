@@ -10,7 +10,7 @@ const Services = () => {
                     <h1 className="text-4xl font-bold text-center">Our Services</h1>
                     <div className='underline h-[2px] bg-primaryDark'></div>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                     {servicesData.map(({ id, service, icon: Icon, info }) => (
                         // Box
                         <div
