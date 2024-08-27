@@ -9,7 +9,7 @@ const Portfolio = () => {
             {/* <!--! Portfolio  --> */}
             <div id="portfolio"
                 name="portfolio"
-                className="portfolio min-h-screen w-full text-zinc-900 dark:text-white bg-gray-200 dark:bg-zinc-900 flex flex-col items-center gap-8 p-6 px-6 md:px-20">
+                className="portfolio min-h-screen w-full text-white bg-zinc-900 flex flex-col items-center gap-8 p-6 px-6 md:px-20">
                 <div className="mt-6">
                     <h1 className="text-4xl font-bold">Portfolio</h1>
                     <div className='underline h-[2px] bg-primaryDark'></div>
@@ -26,7 +26,7 @@ const Portfolio = () => {
                                     className="card w-80 border border-zinc-600 hover:border-zinc-400 rounded-md flex flex-col items-center justify-between gap-3 cursor-pointer transition-all duration-300">
                                     <div className="img h-auto w-full">
                                         <img
-                                            loading='lazy'
+                                            loading='eager'
                                             className="hover:scale-105 hover:rounded-md rounded-tr-md rounded-tl-md h-full w-full opacity-0 transition-all duration-300"
                                             src={imgPath} alt="image"
                                             onLoad={(e) => {
@@ -55,13 +55,13 @@ const Portfolio = () => {
 
                                     <div className="links w-full flex p-3 gap-5 justify-between">
                                         <a target='_blank' rel='noopener noreferrer' href={live_link}
-                                            className="font-semibold dark:text-gray-300 hover:text-accent text-base transition-all duration-200 flex items-center">
+                                            className="font-semibold text-gray-300 hover:text-accent text-base transition-all duration-200 flex items-center">
                                             Live Link
                                             <FaExternalLinkAlt className="ml-2 text-sm" />
                                         </a>
                                         {repo_link && (
                                             <a target='_blank' rel='noopener noreferrer' href={repo_link}
-                                                className="font-semibold dark:text-gray-300 hover:text-accent text-base transition-all duration-200 flex items-center">
+                                                className="font-semibold text-gray-300 hover:text-accent text-base transition-all duration-200 flex items-center">
                                                 Repo Link
                                                 <FaExternalLinkAlt className="ml-2 text-sm" />
                                             </a>

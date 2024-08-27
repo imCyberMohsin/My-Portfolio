@@ -4,7 +4,7 @@ import { servicesData } from '../constants/ServicesData';
 const Services = () => {
 
     return (
-        <section id="services" className="min-h-screen bg-gray-200 dark:bg-zinc-900 text-zinc-900 dark:text-white py-12 pb-10 px-6 md:px-20">
+        <section id="services" className="min-h-screen bg-zinc-900 text-white py-12 pb-10 px-6 md:px-20">
             <div className="max-w-6xl mx-auto">
                 <div className='mb-8 md:mb-12 w-fit text-center mx-auto'>
                     <h1 className="text-4xl font-bold text-center">Our Services</h1>
@@ -15,7 +15,7 @@ const Services = () => {
                         // Box
                         <div
                             key={id}
-                            className="relative bg-zinc-200 dark:bg-zinc-800 text-center rounded-xl p-8 shadow-md hover:shadow-md hover:shadow-primary transition duration-300 ease-in-out cursor-pointer"
+                            className="relative bg-zinc-800 text-center rounded-xl p-8 shadow-md hover:shadow-md hover:shadow-primary transition duration-300 ease-in-out cursor-pointer"
                         >
                             {/* Gradient Top Border */}
                             <div
@@ -28,9 +28,8 @@ const Services = () => {
                             {/* Service Title */}
                             <h2 className="text-2xl font-semibold mb-4">{service}</h2>
                             {/* Service Info */}
-                            <p className="dark:text-gray-300 dark:hover:text-white">{info}</p>
+                            <p className="text-gray-300">{info}</p>
                         </div>
-
                     ))}
                 </div>
             </div>

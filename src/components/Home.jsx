@@ -26,23 +26,27 @@ const Home = () => {
 
     // Typewriter
     const [jobTitle] = useTypewriter({
-        words: ['MERN Stack Developer', ''],
+        words: ['MERN Stack Developer',],
         loop: {},
     })
+
+    const handleContextMenu = (e) => {
+        e.preventDefault();
+    };
 
     return (
         <>
             {/* <!--! Home --> */}
             <div id="Home" name="Home"
-                className="Home w-full min-h-screen pt-3 pb-8 bg-gray-200 dark:bg-zinc-900 flex flex-col-reverse sm:flex-row justify-center items-center gap-5 sm:gap-8">
+                className="Home w-full min-h-screen pt-3 pb-8 bg-zinc-900 flex flex-col-reverse sm:flex-row justify-center items-center gap-5 sm:gap-8">
                 {/* <!-- Left --> */}
-                <div className="left sm:w-2/5 w-4/5 text-zinc-900 dark:text-white flex flex-col sm:justify-start sm:items-start items-center gap-4">
+                <div className="left sm:w-2/5 w-4/5 text-white flex flex-col sm:justify-start sm:items-start items-center gap-4">
                     <div>
                         <h1 className="name text-5xl sm:text-6xl font-semibold">I'm Mohsin</h1>
                         <h2 className="name typing-text text-primary text-xl sm:text-3xl font-semibold">{jobTitle} <Cursor /></h2>
                     </div>
 
-                    <p id='para' className="sm:w-4/5 sm:text-lg text-zinc-900 dark:text-gray-300 text-justify">I'm a MERN Stack Developer skilled in HTML,
+                    <p id='para' className="sm:w-4/5 sm:text-lg text-gray-300 text-justify">I'm a MERN Stack Developer skilled in HTML,
                         CSS, JS, React.js, Node.js, Express.js, MongoDB, and Tailwind CSS. With a passion for crafting seamless and
                         visually appealing web applications, I specialize in creating dynamic and user-friendly experiences. Let's
                         collaborate and turn your ideas into reality!</p>
@@ -73,12 +77,16 @@ const Home = () => {
                 </div>
 
                 {/* <!-- Right --> */}
-                <div className="right pointer-events-none">
-                    <div className="rightImage bg-white w-72 h-72 sm:w-96 sm:h-96 rounded-full sm:rounded-2xl overflow-hidden">
+                <div className="right">
+                    <div
+                        onContextMenu={handleContextMenu}
+                        className="rightImage bg-white w-72 h-72 sm:w-96 sm:h-96 rounded-full sm:rounded-2xl overflow-hidden">
                         <div className='bg-gray-300 rounded-2xl absolute inset-0'></div>
                         <img src="../images/profile2.png"
                             alt="Hero img"
-                            className="rounded-2xl object-cover w-full h-full cursor-pointer sm:p-[1px] opacity-0 transition-all duration-300"
+                            className="rounded-2xl object-cover w-full h-full sm:p-[1px] opacity-0 transition-all duration-300"
+                            loading='eager'
+                            draggable="false"
                             onLoad={(e) => {
                                 e.currentTarget.style.opacity = 1;
                                 e.currentTarget.previousElementSibling.style.display = 'none';

@@ -1,0 +1,5 @@
+# robots.txt for Mohsin's Portfolio on Netlify
+
+User-agent: *
+Allow: /
+Disallow: /admin
