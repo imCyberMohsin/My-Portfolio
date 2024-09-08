@@ -15,11 +15,25 @@ export const portfolioData = [
         repo_link: 'https://github.com/imCyberMohsin/Food-Delivery-App.git',
     },
     {
+        name: 'Chat WebApp',
+        stacks: 'React.js, Express.js, MongoDB, Tailwind, JWT, Socket.io',
+        imgPath: '../../images/projects/chat.png',
+        live_link: 'https://realtime-chat-app-wbdj.onrender.com',
+        repo_link: 'https://github.com/imCyberMohsin/Realtime-Chat-App',
+    },
+    {
         name: 'Resume Builder',
-        stacks: 'React.js, Tailwind CSS',
+        stacks: 'React.js, Tailwind CSS, jsPDF, Netlify',
         imgPath: '../../images/projects/resume.png',
         live_link: 'https://resume-builder-127.netlify.app',
         repo_link: 'https://github.com/imCyberMohsin/ATS-Friendly-Resume-Builder',
+    },
+    {
+        name: 'JT Foundation NGO',
+        stacks: 'Express.js, EJS, Tailwind',
+        imgPath: '../../images/projects/ngo.png',
+        live_link: 'https://jt-foundation.com',
+        repo_link: 'https://github.com/imCyberMohsin',
     },
     {
         name: 'Recipe Finder',
@@ -29,18 +43,18 @@ export const portfolioData = [
         repo_link: 'https://github.com/imCyberMohsin/Recipe-Finder.git',
     },
     {
+        name: "Clay O' Classics",
+        stacks: 'React.js, Tailwind, GSAP, SEO',
+        imgPath: '../../images/projects/clay.png',
+        live_link: 'https://clayoclassics.netlify.app/',
+        repo_link: 'https://github.com/imCyberMohsin',
+    },
+    {
         name: 'Apple Revamped',
         stacks: 'React.js, Tailwind, GSAP',
         imgPath: '../../images/projects/apple.png',
         live_link: 'https://applerevamped.netlify.app/',
         repo_link: 'https://github.com/imCyberMohsin/Apple_website_Revamped.git',
-    },
-    {
-        name: 'JT Foundation NGO',
-        stacks: 'Express.js, EJS, Tailwind',
-        imgPath: '../../images/projects/ngo.png',
-        live_link: 'https://jt-foundation.com',
-        repo_link: '#',
     },
     {
         name: 'Attendance System',
