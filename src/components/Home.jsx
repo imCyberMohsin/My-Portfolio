@@ -26,7 +26,7 @@ const Home = () => {
 
     // Typewriter
     const [jobTitle] = useTypewriter({
-        words: ['MERN Stack Developer',],
+        words: ['Full Stack Developer', 'MERN Stack Developer',],
         loop: {},
     })
 
@@ -46,7 +46,7 @@ const Home = () => {
                         <h2 className="name typing-text text-primary text-xl sm:text-3xl font-semibold">{jobTitle} <Cursor /></h2>
                     </div>
 
-                    <p id='para' className="sm:w-4/5 sm:text-lg text-gray-300 text-justify">I'm a MERN Stack Developer skilled in HTML,
+                    <p id='para' className="sm:w-4/5 sm:text-lg text-gray-300 text-justify">I'm a Full Stack Developer skilled in HTML,
                         CSS, JS, React.js, Node.js, Express.js, MongoDB, and Tailwind CSS. With a passion for crafting seamless and
                         visually appealing web applications, I specialize in creating dynamic and user-friendly experiences. Let's
                         collaborate and turn your ideas into reality!</p>
