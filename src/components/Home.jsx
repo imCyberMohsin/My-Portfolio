@@ -26,7 +26,7 @@ const Home = () => {
 
     // Typewriter
     const [jobTitle] = useTypewriter({
-        words: ['Full Stack Developer', 'MERN Stack Developer',],
+        words: ['Full Stack Developer', 'MERN Stack Developer', 'Freelancer'],
         loop: {},
     })
 

@@ -19,3 +19,18 @@ body {
 html {
     scroll-behavior: smooth;
 }
+
+/*? Hero Image Glowing Effect */
+.rightImage {
+    transition: box-shadow 0.3s ease;
+}
+
+.rightImage:hover {
+    box-shadow: 0px 0px 10px 5px rgba(124, 58, 237, 0.6);
+    /* Glowing effect with #7C3AED */
+}
+
+.glow-effect:hover {
+    box-shadow: 0px 0px 20px 10px rgba(124, 58, 237, 0.8);
+    /* Adjust glow color/intensity */
+}
