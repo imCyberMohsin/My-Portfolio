@@ -52,9 +52,7 @@ const Footer = memo(() => {
                                 ) : (
                                     <FaClipboard className="mr-2" />
                                 )}
-                                <span className="font-semibold">
-                                    {isCopied ? 'Copied!' : 'Copy Email'}
-                                </span>
+                                Copy Email
                             </button>
                         </div>
                     </div>
