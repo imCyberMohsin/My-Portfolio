@@ -17,14 +17,14 @@ const Footer = memo(() => {
                     {/* Drop Your Mail */}
                     <div className="my-6 w-fit">
                         <h2 className="text-lg font-bold text-white uppercase">Connect With Me</h2>
-                        <p className="text-gray-400 mb-2">Drop your email below and I'll get back to you</p>
+                        <p className="text-gray-400 mb-2">Drop your email, I'll get back to you</p>
                         <form action="https://getform.io/f/wbrkzvwa" method="post" className="flex flex-col md:flex-row justify-center">
                             <div className="flex flex-col md:flex-row w-full max-w-md mx-auto">
                                 <input
                                     type="email"
                                     placeholder="Enter your email"
                                     name='email'
-                                    className="p-2 rounded-l-full border border-gray-600 bg-zinc-800 text-gray-300 w-full mb-2 md:mb-0 rounded-full md:rounded-l-xl md:rounded-r-none"
+                                    className="p-2 text-center md:text-start rounded-l-full border border-gray-600 bg-zinc-800 text-gray-300 w-full mb-2 md:mb-0 rounded-full md:rounded-l-xl md:rounded-r-none"
                                     required
                                 />
                                 <button
