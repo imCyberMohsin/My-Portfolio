@@ -1,43 +1,102 @@
-import React from 'react';
-import { FaHeart } from "react-icons/fa";
-import { footerData } from '../constants/FooterData'
+import React, { useState, memo } from 'react';
+import { FaHeart, FaClipboard, FaCheck, FaLinkedin, FaGithub, FaTwitter, FaInstagram } from 'react-icons/fa';
 
-const Footer = () => {
+const Footer = memo(() => {
+    const [isCopied, setIsCopied] = useState(false);
+
+    const handleCopyEmail = () => {
+        navigator.clipboard.writeText('mohsinansari7033+portfolio@gmail.com');
+        setIsCopied(true);
+        setTimeout(() => setIsCopied(false), 3000);
+    };
+
     return (
-        <>
-            <footer className="bg-zinc-900 text-center border-t">
-                <div className="mx-auto w-full max-w-screen-xl">
-                    <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
-                        {footerData.map((section, index) => (
-                            <div key={index}>
-                                <h2 className="mb-6 text-lg font-bold text-white uppercase">{section.heading}</h2>
-                                <ul className="text-gray-400 font-medium">
-                                    {section.links.map((link, linkIndex) => (
-                                        <li className="mb-4" key={linkIndex}>
-                                            <a href={link.href} className="hover:underline underline-offset-4 hover:text-primary duration-200 transition-all">{link.name}</a>
-                                        </li>
-                                    ))}
-                                </ul>
+        <footer className="bg-zinc-900 text-center border-t border-zinc-500">
+            <div className="mx-auto w-full max-w-screen-xl">
+                <div className="flex flex-col md:flex-row justify-between items-center p-8">
+                    {/* Drop Your Mail */}
+                    <div className="my-6 w-fit">
+                        <h2 className="text-lg font-bold text-white uppercase">Connect With Me</h2>
+                        <p className="text-gray-400 mb-2">Drop your email below and I'll get back to you</p>
+                        <form action="https://getform.io/f/wbrkzvwa" method="post" className="flex flex-col md:flex-row justify-center">
+                            <div className="flex flex-col md:flex-row w-full max-w-md mx-auto">
+                                <input
+                                    type="email"
+                                    placeholder="Enter your email"
+                                    name='email'
+                                    className="p-2 rounded-l-full border border-gray-600 bg-zinc-800 text-gray-300 w-full mb-2 md:mb-0 rounded-full md:rounded-l-xl md:rounded-r-none"
+                                    required
+                                />
+                                <button
+                                    type="submit"
+                                    className="p-2 rounded-full bg-primary text-white hover:ring-1 hover:ring-white duration-200 transition-all md:rounded-l-none md:rounded-r-xl"
+                                >
+                                    Connect
+                                </button>
                             </div>
-                        ))}
+                        </form>
                     </div>
-                    <div className="px-4 py-4 md:flex flex-col md:items-center md:justify-center border-t">
-                        <div className="px-4 py-2 md:flex flex-col md:items-center md:justify-center">
-                            <span className="text-gray-400 sm:text-center text-sm font-medium">© 2024 <a href="#">Mohsin Ansari. </a>All Rights Reserved.</span>
-                            <p className="w-full text-gray-400 mt-2 font-semibold whitespace-nowrap text-sm flex items-center justify-center">
-                                Designed and Developed with
-                                <span className="whitespace flex items-center ml-1">
-                                    <FaHeart className="text-primary cursor-pointer" />
-                                    <span className="ml-1">by</span>
-                                    <a target="_blank" href="https://www.linkedin.com/in/mohsin-ansari127/" className="text-primary whitespace-nowrap underline underline-offset-2 ml-1">Mohsin Ansari</a>
+
+                    {/* Email Copy Feature */}
+                    <div className="flex flex-col items-center my-3">
+                        <h2 className="text-lg font-bold text-white uppercase">Mail Me</h2>
+                        <p className="text-gray-400 mb-2">Feel free to reach out!</p>
+                        <div className="flex items-center justify-center">
+                            <button
+                                onClick={handleCopyEmail}
+                                className="flex items-center bg-primary text-white rounded-full md:rounded-xl px-5 py-2.5 hover:shadow-lg hover:ring-1 hover:ring-white duration-200 transition-all"
+                                aria-label="Copy email address"
+                            >
+                                {isCopied ? (
+                                    <FaCheck className="mr-2" />
+                                ) : (
+                                    <FaClipboard className="mr-2" />
+                                )}
+                                <span className="font-semibold">
+                                    {isCopied ? 'Copied!' : 'Copy Email'}
                                 </span>
-                            </p>
+                            </button>
+                        </div>
+                    </div>
+
+                    {/* Social Media Links Section */}
+                    <div className="flex flex-col items-center mt-3">
+                        <h2 className="text-lg font-bold text-white uppercase">Follow Me</h2>
+                        <p className="text-gray-400 mb-2">On Social Media</p>
+                        <div className="flex space-x-4 mt-1">
+                            <a href="https://www.linkedin.com/in/mohsin-ansari127/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors duration-200">
+                                <FaLinkedin size={24} />
+                            </a>
+                            <a href="https://github.com/imcybermohsin" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors duration-200">
+                                <FaGithub size={24} />
+                            </a>
+                            <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors duration-200">
+                                <FaTwitter size={24} />
+                            </a>
+                            <a href="https://www.instagram.com/yourusername/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors duration-200">
+                                <FaInstagram size={24} />
+                            </a>
                         </div>
                     </div>
                 </div>
-            </footer>
-        </>
+
+                {/* Copyright */}
+                <div className="px-4 py-4 md:flex flex-col md:items-center md:justify-center border-t border-zinc-500">
+                    <div className="px-4 py-2 md:flex flex-col md:items-center md:justify-center">
+                        <span className="text-gray-400 sm:text-center text-sm font-medium">© 2024 <a href="#">Mohsin Ansari.</a> All Rights Reserved.</span>
+                        <p className="w-full text-gray-400 mt-2 font-semibold whitespace-nowrap text-sm flex items-center justify-center">
+                            Designed and Developed with
+                            <span className="flex items-center ml-1">
+                                <FaHeart className="text-primary cursor-pointer" />
+                                <span className="ml-1">by</span>
+                                <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/mohsin-ansari127/" className="text-primary whitespace-nowrap underline underline-offset-2 ml-1">Mohsin Ansari</a>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
     );
-}
+});
 
 export default Footer;

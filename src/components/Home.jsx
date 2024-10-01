@@ -38,9 +38,9 @@ const Home = () => {
         <>
             {/* <!--! Home --> */}
             <div id="Home" name="Home"
-                className="Home w-full min-h-screen pt-3 pb-8 bg-zinc-900 flex flex-col-reverse sm:flex-row justify-center items-center gap-5 sm:gap-8">
+                className="Home w-full min-h-screen pt-3 pb-8 bg-zinc-900 flex flex-col-reverse md:flex-row justify-center items-center gap-5 sm:gap-8">
                 {/* <!-- Left --> */}
-                <div className="left sm:w-2/5 w-4/5 text-white flex flex-col sm:justify-start sm:items-start items-center gap-4">
+                <div className="left md:w-2/5 w-4/5 text-white flex flex-col md:justify-start md:items-start items-center gap-4">
                     <div>
                         <h1 className="name text-5xl sm:text-6xl font-semibold">I'm Mohsin</h1>
                         <h2 className="name typing-text text-primary text-xl sm:text-3xl font-semibold">{jobTitle} <Cursor /></h2>
@@ -68,7 +68,7 @@ const Home = () => {
 
                         {/* Download Button */}
                         <a id='download-btn' href="../../resume.pdf" download
-                            className="group inline-block px-6 py-3 font-semibold uppercase text-center text-white tracking-wider bg-primaryDark hover:bg-accent rounded-full transition-all duration-200 ease-out hover:text-white hover:no-underline mt-3 w-full md:w-auto"
+                            className="group inline-block px-6 py-3 font-semibold uppercase text-center text-white tracking-wider bg-primaryDark hover:bg-accent rounded-full md:rounded-xl transition-all duration-200 ease-out hover:text-white hover:no-underline mt-3 w-full md:w-auto"
                             role="button"
                         >
                             Download My Resume
@@ -80,7 +80,7 @@ const Home = () => {
                 <div className="right">
                     <div
                         onContextMenu={handleContextMenu}
-                        className="rightImage bg-white w-72 h-72 sm:w-96 sm:h-96 rounded-full sm:rounded-2xl overflow-hidden">
+                        className="rightImage bg-white w-72 h-72 sm:w-96 sm:h-96 rounded-full md:rounded-2xl overflow-hidden">
                         <div className='bg-gray-300 rounded-2xl absolute inset-0'></div>
                         <img src="../images/profile2.png"
                             alt="Hero img"
