@@ -6,7 +6,7 @@ const Skills = () => {
     return (
         <>
             {/* <!--! Skills  --> */}
-            <div id="skills" className="skills w-full sm:min-h-screen text-white bg-zinc-900 flex flex-col items-center p-6 gap-8 px-6 md:px-20">
+            <div id="skills" className="skills w-full sm:min-h-screen dark:text-white text-zinc-800 dark:bg-zinc-900 bg-zinc-300 flex flex-col items-center p-6 gap-8 px-6 md:px-20">
                 <div className="mt-6">
                     <h1 className="text-4xl font-bold">Skills</h1>
                     <div className='underline h-[2px] bg-primaryDark'></div>
@@ -16,7 +16,7 @@ const Skills = () => {
                     linksAndNames.map(({ category, info }) => {
                         return (
                             <div key={category} className={category.toLowerCase()}>
-                                <h1 className="text-2xl text-gray-300 py-3 font-semibold text-center">{category}</h1>
+                                <h1 className="text-2xl dark:text-gray-300 text-zinc-800 py-3 font-semibold text-center">{category}</h1>
                                 <div className="icons flex justify-center flex-wrap gap-8">
                                     {
                                         info.names.map((name) => {

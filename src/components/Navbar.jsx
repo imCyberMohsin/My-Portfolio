@@ -4,9 +4,17 @@ import { CiMenuFries } from 'react-icons/ci';
 import { RxCross1 } from 'react-icons/rx';
 import gsap from 'gsap';
 import { navLinks } from '../constants/NavbarData';
+import DarkModeToggleBtn from './DarkModeToggleBtn';
 
 // Memoize the navbar to avoid unnecessary re-renders
 const Navbar = memo(() => {
+    //? Dark Mode Toggle 
+    const [darkMode, setDarkMode] = useState(() => {
+        const savedTheme = localStorage.getItem('theme');
+        return savedTheme === 'dark' || !savedTheme; // Default to dark mode if no theme is set
+    });
+
+    //? Nav Toggle
     const [nav, setNav] = useState(false);
     const location = useLocation();
     const navRef = useRef(null); // Ref for the mobile navigation container
@@ -52,7 +60,7 @@ const Navbar = memo(() => {
     }, [nav]);
 
     return (
-        <nav className="border-gray-200 bg-zinc-900 text-white sticky top-0 z-50 w-full shadow-lg">
+        <nav className="border-gray-200 dark:bg-zinc-900 dark:text-white text-zinc-800 bg-zinc-300 sticky top-0 z-50 w-full shadow-lg">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 {/* Owner Name */}
                 <NavLink to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
@@ -77,7 +85,7 @@ const Navbar = memo(() => {
                                 <NavLink
                                     to={`/${link}`}
                                     className={({ isActive }) =>
-                                        `${isActive ? "underline underline-offset-8 text-primary decoration-primary" : "text-white"} 
+                                        `${isActive ? "underline underline-offset-8 text-primary decoration-primary" : "dark:text-white"} 
                                         block py-2 px-3 rounded md:hover:text-primary md:p-0 transition-all duration-300`
                                     }
                                 >
@@ -93,19 +101,24 @@ const Navbar = memo(() => {
                     </ul>
                 </div>
 
+                {/* Dark Mode Toggle Button */}
+                <div className='hidden md:block'>
+                    <DarkModeToggleBtn darkMode={darkMode} setDarkMode={setDarkMode} />
+                </div>
+
                 {/* Mobile Menu Toggle */}
                 <div className="md:hidden text-white cursor-pointer z-10" onClick={() => setNav(!nav)}>
                     {nav ? (
-                        <RxCross1 size={30} className="transform hover:rotate-180 transition-transform duration-300 ease-in-out" />
+                        <RxCross1 size={30} className="dark:text-white text-zinc-800 transform hover:rotate-180 transition-transform duration-300 ease-in-out" />
                     ) : (
-                        <CiMenuFries size={30} className="transform hover:rotate-90 transition-transform duration-300 ease-in-out" />
+                        <CiMenuFries size={30} className="dark:text-white text-zinc-800 transform hover:rotate-90 transition-transform duration-300 ease-in-out" />
                     )}
                 </div>
 
                 {/* Mobile Navigation */}
                 <ul
                     ref={navRef} // Reference for the mobile nav container
-                    className={`fixed top-0 right-0 w-1/2 h-screen bg-zinc-900 flex flex-col items-center justify-center transform transition-transform duration-300 ease-in-out ${nav ? 'translate-x-0' : 'translate-x-full'
+                    className={`fixed top-0 right-0 w-1/2 h-screen dark:bg-zinc-900 bg-zinc-200 flex flex-col items-center justify-center transform transition-transform duration-300 ease-in-out ${nav ? 'translate-x-0' : 'translate-x-full'
                         }`}
                 >
                     {navLinks.map(({ id, link, name }) => (
@@ -117,8 +130,8 @@ const Navbar = memo(() => {
                             <NavLink
                                 to={`/${link}`}
                                 className={({ isActive }) =>
-                                    `${isActive ? "bg-zinc-800 rounded-lg w-full text-primary" : "text-white hover:underline underline-offset-4"} 
-                                    block py-2 px-3 hover:text-primary  transition-all duration-300`
+                                    `${isActive ? "bg-zinc-800 rounded-lg w-full text-primary" : "dark:text-white text-zinc-800 hover:underline underline-offset-4"} 
+                                    block py-2 px-3 dark:hover:text-primary hover:text-primary decoration-primary  transition-all duration-300`
                                 }
                                 onClick={() => setNav(false)} // Close mobile menu on link click
                             >
@@ -126,6 +139,11 @@ const Navbar = memo(() => {
                             </NavLink>
                         </li>
                     ))}
+
+                    <div className='md:hidden py-4'>
+                        <DarkModeToggleBtn darkMode={darkMode} setDarkMode={setDarkMode} />
+                    </div>
+
                 </ul>
             </div>
         </nav>

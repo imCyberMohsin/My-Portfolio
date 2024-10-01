@@ -64,7 +64,7 @@ export const portfolioData = [
     // },
     {
         name: 'TwoGood UI',
-        stacks: 'HTML,CSS, JS, GSAP',
+        stacks: 'HTML, CSS, JS, GSAP',
         imgPath: '../../images/projects/twogood.png',
         live_link: 'https://two-good-ui.netlify.app',
         repo_link: 'https://github.com/imCyberMohsin/twoGoodCo-clone.git',

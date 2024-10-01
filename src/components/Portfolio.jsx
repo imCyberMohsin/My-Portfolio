@@ -9,7 +9,7 @@ const Portfolio = () => {
             {/* <!--! Portfolio  --> */}
             <div id="portfolio"
                 name="portfolio"
-                className="portfolio min-h-screen w-full text-white bg-zinc-900 flex flex-col items-center gap-8 p-6 px-6 md:px-20">
+                className="portfolio min-h-screen w-full dark:text-white text-zinc-800 dark:bg-zinc-900 bg-zinc-300 flex flex-col items-center gap-8 p-6 px-6 md:px-20">
                 <div className="mt-6">
                     <h1 className="text-4xl font-bold">Portfolio</h1>
                     <div className='underline h-[2px] bg-primaryDark'></div>
@@ -23,7 +23,7 @@ const Portfolio = () => {
                             const stacksArray = stacks.split(', ');
                             return (
                                 <div key={name}
-                                    className="card w-80 border border-zinc-600 hover:border-zinc-400 rounded-md flex flex-col items-center justify-between gap-3 cursor-pointer transition-all duration-300">
+                                    className="card w-80 border dark:border-zinc-600 border-zinc-400 dark:hover:border-zinc-400 hover:border-zinc-600 rounded-md flex flex-col items-center justify-between gap-3 cursor-pointer transition-all duration-300">
                                     <div className="img h-auto w-full">
                                         <img
                                             loading='eager'
@@ -55,13 +55,13 @@ const Portfolio = () => {
 
                                     <div className="links w-full flex p-3 gap-5 justify-between">
                                         <a target='_blank' rel='noopener noreferrer' href={live_link}
-                                            className="font-semibold text-gray-300 text-base flex items-center border border-zinc-500 rounded-md p-1.5 hover:bg-white hover:text-black transition-all duration-500">
+                                            className="font-semibold dark:text-gray-300 text-zinc-800 text-base flex items-center border border-zinc-500 rounded-md p-1.5 dark:hover:bg-white hover:bg-zinc-800 dark:hover:text-black hover:text-white transition-all duration-500">
                                             Live Link
                                             <FaExternalLinkAlt className="ml-2 text-sm" />
                                         </a>
                                         {repo_link && (
                                             <a target='_blank' rel='noopener noreferrer' href={repo_link}
-                                                className="font-semibold text-gray-300 text-base flex items-center border border-zinc-500 rounded-md p-1.5 hover:bg-white hover:text-black transition-all duration-500">
+                                                className="font-semibold dark:text-gray-300 text-zinc-800 text-base flex items-center border border-zinc-500 rounded-md p-1.5 dark:hover:bg-white hover:bg-zinc-800 dark:hover:text-black hover:text-white transition-all duration-500">
                                                 Repo Link
                                                 <FaExternalLinkAlt className="ml-2 text-sm" />
                                             </a>
