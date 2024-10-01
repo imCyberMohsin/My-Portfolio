@@ -15,12 +15,10 @@ const Services = () => {
                         // Box
                         <div
                             key={id}
-                            className="relative bg-zinc-800 text-center rounded-xl p-8 shadow-md hover:shadow-md hover:shadow-primary transition duration-300 ease-in-out cursor-pointer"
+                            className="relative max-w-xs bg-zinc-800 text-center rounded-xl p-8 shadow-md hover:shadow-md hover:shadow-primary transition duration-300 ease-in-out cursor-pointer mx-auto"
                         >
                             {/* Gradient Top Border */}
-                            <div
-                                className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent rounded-t-xl"
-                            />
+                            <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent rounded-t-xl" />
                             {/* Icon */}
                             <div className="flex items-center justify-center mb-6">
                                 <Icon size={40} />

@@ -1,4 +1,4 @@
-import { useState, useEffect, memo } from 'react';
+import { useState, useEffect, useRef, memo } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { CiMenuFries } from 'react-icons/ci';
 import { RxCross1 } from 'react-icons/rx';
@@ -9,6 +9,7 @@ import { navLinks } from '../constants/NavbarData';
 const Navbar = memo(() => {
     const [nav, setNav] = useState(false);
     const location = useLocation();
+    const navRef = useRef(null); // Ref for the mobile navigation container
 
     useEffect(() => {
         // Trigger GSAP animation on component mount
@@ -31,6 +32,24 @@ const Navbar = memo(() => {
             setNav(false);
         }
     }, [location]); // Reacts to route changes
+
+    // Close the mobile nav when clicking outside
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            // If the click is outside the navRef container and the nav is open
+            if (navRef.current && !navRef.current.contains(event.target) && nav) {
+                setNav(false); // Close the mobile menu
+            }
+        };
+
+        // Add the event listener for clicks
+        document.addEventListener('mousedown', handleClickOutside);
+
+        // Cleanup the event listener when component unmounts
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [nav]);
 
     return (
         <nav className="border-gray-200 bg-zinc-900 text-white sticky top-0 z-50 w-full shadow-lg">
@@ -85,7 +104,8 @@ const Navbar = memo(() => {
 
                 {/* Mobile Navigation */}
                 <ul
-                    className={`absolute top-0 left-0 w-full h-screen bg-zinc-900 flex flex-col items-center justify-center transform transition-transform duration-500 ease-in-out ${nav ? 'translate-x-0' : '-translate-x-full'
+                    ref={navRef} // Reference for the mobile nav container
+                    className={`absolute top-0 right-0 w-1/2 h-screen bg-zinc-900 flex flex-col items-center justify-center transform transition-transform duration-500 ease-in-out ${nav ? 'translate-x-0' : 'translate-x-full'
                         }`}
                 >
                     {navLinks.map(({ id, link, name }) => (
@@ -97,8 +117,8 @@ const Navbar = memo(() => {
                             <NavLink
                                 to={`/${link}`}
                                 className={({ isActive }) =>
-                                    `${isActive ? "underline underline-offset-4 text-primary decoration-primary" : "text-white"} 
-                                    block py-2 px-3 hover:text-primary hover:underline underline-offset-4 transition-all duration-300`
+                                    `${isActive ? "bg-zinc-800 rounded-lg w-full text-primary" : "text-white hover:underline underline-offset-4"} 
+                                    block py-2 px-3 hover:text-primary  transition-all duration-300`
                                 }
                                 onClick={() => setNav(false)} // Close mobile menu on link click
                             >
