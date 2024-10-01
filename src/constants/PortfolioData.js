@@ -5,7 +5,6 @@ export const colors = [
     'bg-fuchsia-500', 'bg-rose-500', 'bg-violet-500'
 ];
 
-
 export const portfolioData = [
     {
         name: 'Food Delivery',
@@ -56,13 +55,13 @@ export const portfolioData = [
         live_link: 'https://applerevamped.netlify.app/',
         repo_link: 'https://github.com/imCyberMohsin/Apple_website_Revamped.git',
     },
-    {
-        name: 'Attendance System',
-        stacks: 'Express.js, EJS, MongoDB, Face.js-api, live-attendance',
-        imgPath: '../../images/projects/attendance.png',
-        live_link: 'https://attendance-system-whdl.onrender.com',
-        repo_link: 'https://github.com/imCyberMohsin/Attendance-System_NodeJS.git'
-    },
+    // {
+    //     name: 'Attendance System',
+    //     stacks: 'Express.js, EJS, MongoDB, Face.js-api, live-attendance',
+    //     imgPath: '../../images/projects/attendance.png',
+    //     live_link: 'https://attendance-system-whdl.onrender.com',
+    //     repo_link: 'https://github.com/imCyberMohsin/Attendance-System_NodeJS.git'
+    // },
     {
         name: 'TwoGood UI',
         stacks: 'HTML,CSS, JS, GSAP',
@@ -74,7 +73,7 @@ export const portfolioData = [
         name: 'Cynthia UI',
         stacks: 'HTML, CSS, JS, GSAP',
         imgPath: '../../images/projects/cynthia.png',
-        live_link: 'https://imcybermohsin.github.io/Modern_Website-1_cynthiaugwu-clone/',
+        live_link: 'https://cynthia-ui.netlify.app',
         repo_link: 'https://github.com/imCyberMohsin/Modern_Website-1_cynthiaugwu-clone.git',
     },
 ]
