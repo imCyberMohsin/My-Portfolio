@@ -85,7 +85,7 @@ const Navbar = memo(() => {
                                 <NavLink
                                     to={`/${link}`}
                                     className={({ isActive }) =>
-                                        `${isActive ? "underline underline-offset-8 text-primary decoration-primary font-semibold" : "dark:text-white"} 
+                                        `${isActive ? "underline underline-offset-8 text-primary decoration-primary" : "dark:text-white"} 
                                         py-2 px-3 rounded md:hover:text-primary md:p-0 transition-all duration-300 flex items-center space-x-2`
                                     }
                                 >
