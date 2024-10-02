@@ -75,7 +75,7 @@ const Navbar = memo(() => {
                 {/* Desktop Navigation */}
                 <div className="hidden w-full md:block md:w-auto">
                     <ul className="transition-all duration-300 font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 bg-transparent">
-                        {navLinks.map(({ id, link, name }) => (
+                        {navLinks.map(({ id, link, name, icon: Icon }) => (
                             <li
                                 key={id}
                                 id="nav-item"
@@ -85,11 +85,12 @@ const Navbar = memo(() => {
                                 <NavLink
                                     to={`/${link}`}
                                     className={({ isActive }) =>
-                                        `${isActive ? "underline underline-offset-8 text-primary decoration-primary" : "dark:text-white"} 
-                                        block py-2 px-3 rounded md:hover:text-primary md:p-0 transition-all duration-300`
+                                        `${isActive ? "underline underline-offset-8 text-primary decoration-primary font-semibold" : "dark:text-white"} 
+                                        py-2 px-3 rounded md:hover:text-primary md:p-0 transition-all duration-300 flex items-center space-x-2`
                                     }
                                 >
-                                    {name}
+                                    <Icon /> {/* Render the icon */}
+                                    <span>{name}</span>
                                 </NavLink>
                                 {/* Hover underline for non-active items */}
                                 <div
@@ -121,21 +122,22 @@ const Navbar = memo(() => {
                     className={`fixed top-0 right-0 w-1/2 h-screen dark:bg-zinc-900 bg-zinc-200 flex flex-col items-center justify-center transform transition-transform duration-300 ease-in-out ${nav ? 'translate-x-0' : 'translate-x-full'
                         }`}
                 >
-                    {navLinks.map(({ id, link, name }) => (
+                    {navLinks.map(({ id, link, name, icon: Icon }) => (
                         <li
                             key={id}
-                            className="px-4 cursor-pointer capitalize py-4 font-semibold text-lg list-none transform hover:translate-z-4 hover:rotateX-5 hover:rotateY-5 transition-transform duration-300"
+                            className="px-4 cursor-pointer capitalize py-4 font-semibold text-lg list-none transform hover:translate-z-4 hover:rotateX-5 hover:rotateY-5 transition-transform duration-300 flex items-center space-x-2"
                             style={{ perspective: '1000px' }}
                         >
                             <NavLink
                                 to={`/${link}`}
                                 className={({ isActive }) =>
                                     `${isActive ? "bg-zinc-800 rounded-lg w-full text-primary" : "dark:text-white text-zinc-800 hover:underline underline-offset-4"} 
-                                    block py-2 px-3 dark:hover:text-primary hover:text-primary decoration-primary  transition-all duration-300`
+                                    py-2 px-3 dark:hover:text-primary hover:text-primary decoration-primary transition-all duration-300 flex items-center space-x-2`
                                 }
                                 onClick={() => setNav(false)} // Close mobile menu on link click
                             >
-                                {name}
+                                <span><Icon /></span> {/* Render the icon */}
+                                <span>{name}</span>
                             </NavLink>
                         </li>
                     ))}

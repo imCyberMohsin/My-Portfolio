@@ -1,5 +1,6 @@
 import React, { useState, memo } from 'react';
 import { FaHeart, FaClipboard, FaCheck, FaLinkedin, FaGithub, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { toast } from 'react-hot-toast';
 
 const Footer = memo(() => {
     const [isCopied, setIsCopied] = useState(false);
@@ -10,6 +11,35 @@ const Footer = memo(() => {
         setTimeout(() => setIsCopied(false), 3000);
     };
 
+    //? Toast Message
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        setIsSubmitting(true);
+
+        const formData = new FormData(event.target);
+
+        try {
+            const response = await fetch('https://getform.io/f/wbrkzvwa', {
+                method: 'POST',
+                body: formData,
+            });
+
+            if (response.ok) {
+                toast.success("Mail Sent!"); // Default success toast
+                event.target.reset(); // Reset the form after successful submission
+            } else {
+                throw new Error('Failed to send mail'); // Throw error for unsuccessful response
+            }
+        } catch (error) {
+            console.error("Error submitting form:", error);
+            toast.error("Submission failed. Please try again."); // Default error toast
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
     return (
         <footer className="dark:bg-zinc-900 bg-zinc-300 text-center border-t border-zinc-500">
             <div className="mx-auto w-full max-w-screen-xl">
@@ -18,7 +48,7 @@ const Footer = memo(() => {
                     <div className="my-6 w-fit">
                         <h2 className="text-lg font-bold dark:text-white text-zinc-800 uppercase">Connect With Me</h2>
                         <p className="dark:text-gray-400 text-gray-600 mb-2">Drop your email, I'll get back to you</p>
-                        <form action="https://getform.io/f/wbrkzvwa" method="post" className="flex flex-col md:flex-row justify-center">
+                        <form onSubmit={handleSubmit} className="flex flex-col md:flex-row justify-center">
                             <div className="flex flex-col md:flex-row w-full max-w-md mx-auto">
                                 <input
                                     type="email"
@@ -30,8 +60,9 @@ const Footer = memo(() => {
                                 <button
                                     type="submit"
                                     className="p-2 rounded-full bg-primary text-white hover:ring-1 dark:hover:ring-white hover:ring-zinc-800 duration-200 transition-all md:rounded-l-none md:rounded-r-xl"
+                                    disabled={isSubmitting} // Disable button while submitting
                                 >
-                                    Connect
+                                    {isSubmitting ? 'Sending' : 'Connect'}
                                 </button>
                             </div>
                         </form>

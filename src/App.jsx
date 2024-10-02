@@ -6,12 +6,14 @@ import Skills from './components/Skills'
 import Portfolio from './components/Portfolio'
 import Services from './components/Services'
 import Contact from './components/Contact'
+import { Toaster } from 'react-hot-toast';
 
 function App() {
 
   return (
     <>
       <BrowserRouter>
+        <Toaster position='bottom-center' />
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />}></Route>
@@ -24,7 +26,6 @@ function App() {
         <Footer />
       </BrowserRouter>
     </>
-
   )
 }
 
