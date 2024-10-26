@@ -43,7 +43,7 @@ const Home = () => {
                 <div className="left md:w-2/5 w-4/5 dark:text-white text-zinc-800 flex flex-col md:justify-start md:items-start items-center gap-4">
                     <div>
                         <h1 className="name text-5xl sm:text-6xl font-semibold">I'm Mohsin</h1>
-                        <h2 className="name typing-text text-primary text-xl sm:text-3xl font-semibold">{jobTitle} <Cursor /></h2>
+                        <h2 className="name typing-text dark:text-primary text-zinc-600 text-xl sm:text-3xl font-semibold">{jobTitle} <Cursor /></h2>
                     </div>
 
                     <p id='para' className="sm:w-4/5 sm:text-lg dark:text-gray-300 text-zinc-800 text-justify">I'm a Full Stack Developer skilled in HTML,
@@ -58,7 +58,7 @@ const Home = () => {
                                 socials.map(({ name, href, IconComponent }) => {
                                     return (
                                         <a id='social-icon' key={name} href={href} target="_blank"
-                                            className="icons text-xl w-10 h-10 bg-transparent rounded-full overflow-hidden flex justify-center items-center border-2 dark:border-white border-black cursor-pointer hover:bg-primary shadow-sm hover:shadow-primary hover:scale-110 transition-all duration-200">
+                                            className="icons text-xl w-10 h-10 bg-transparent rounded-full overflow-hidden flex justify-center items-center border-2 dark:border-white border-black cursor-pointer dark:hover:bg-primary hover:bg-zinc-500 shadow-sm hover:shadow-primary transition-all duration-200">
                                             <IconComponent />
                                         </a>
                                     )
@@ -68,7 +68,7 @@ const Home = () => {
 
                         {/* Download Button */}
                         <a id='download-btn' href="../../resume.pdf" download
-                            className="group inline-block px-6 py-3 font-semibold uppercase text-center text-white tracking-wider bg-primaryDark hover:bg-accent rounded-full md:rounded-xl transition-all duration-200 ease-out hover:text-white hover:no-underline mt-3 w-full md:w-auto"
+                            className="group inline-block px-6 py-3 font-semibold uppercase text-center text-white tracking-wider dark:bg-primaryDark bg-zinc-900 dark:hover:bg-accent hover:bg-zinc-700 rounded-full md:rounded-xl transition-all duration-200 ease-out hover:text-white hover:no-underline mt-3 w-full md:w-auto"
                             role="button"
                         >
                             Download My Resume

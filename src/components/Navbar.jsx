@@ -119,7 +119,7 @@ const Navbar = memo(() => {
                 {/* Mobile Navigation */}
                 <ul
                     ref={navRef} // Reference for the mobile nav container
-                    className={`fixed top-0 right-0 w-1/2 h-screen dark:bg-zinc-900 bg-zinc-200 flex flex-col items-center justify-center transform transition-transform duration-300 ease-in-out ${nav ? 'translate-x-0' : 'translate-x-full'
+                    className={`fixed top-0 right-0 w-3/5 h-screen dark:bg-zinc-900 bg-zinc-200 flex flex-col items-center justify-center transform transition-transform duration-300 ease-in-out ${nav ? 'translate-x-0' : 'translate-x-full'
                         }`}
                 >
                     {navLinks.map(({ id, link, name, icon: Icon }) => (

@@ -23,7 +23,7 @@ const Skills = () => {
                                             const skillName = name.split('.')[0];   // ['HTML.png'] -> ['HTML', 'png'], [0] Means 'HTML'
                                             const shadowClass = shadowColors[skillName] || 'shadow-accent hover:shadow-accent';  // Accessing the Above object using key as the name, shadowColort[HTML]
                                             return (
-                                                <div key={name} className={`w-28 flex flex-col gap-2 items-center shadow-sm hover:shadow-md rounded-md p-2 cursor-pointer ${shadowClass} hover:scale-105 transition-all duration-200`}>
+                                                <div key={name} className={`w-28 flex flex-col gap-2 dark:bg-transparent bg-white dark:text-white text-black items-center shadow-sm hover:shadow-md rounded-md p-2 cursor-pointer ${shadowClass} hover:scale-105 transition-all duration-200`}>
                                                     <div className="img sm:w-10 sm:h-10 w-8 h-8">
                                                         <img loading='lazy'
                                                             src={`${info.imgPath}${name}`}
