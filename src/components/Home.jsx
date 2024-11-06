@@ -38,7 +38,7 @@ const Home = () => {
         <>
             {/* <!--! Home --> */}
             <div id="Home" name="Home"
-                className="Home w-full min-h-screen pt-3 pb-8 dark:bg-zinc-900 bg-zinc-300 flex flex-col-reverse md:flex-row justify-center items-center gap-5 sm:gap-8">
+                className="Home w-full min-h-screen pt-3 pb-8 dark:bg-zinc-900 bg-zinc-200 flex flex-col-reverse md:flex-row justify-center items-center gap-5 sm:gap-8">
                 {/* <!-- Left --> */}
                 <div className="left md:w-2/5 w-4/5 dark:text-white text-zinc-800 flex flex-col md:justify-start md:items-start items-center gap-4">
                     <div>

@@ -6,7 +6,7 @@ const Skills = () => {
     return (
         <>
             {/* <!--! Skills  --> */}
-            <div id="skills" className="skills w-full sm:min-h-screen dark:text-white text-zinc-800 dark:bg-zinc-900 bg-zinc-300 flex flex-col items-center p-6 gap-8 px-6 md:px-20">
+            <div id="skills" className="skills w-full sm:min-h-screen dark:text-white text-zinc-800 dark:bg-zinc-900 bg-zinc-200 flex flex-col items-center p-6 gap-8 px-6 md:px-20">
                 <div className="mt-6">
                     <h1 className="text-4xl font-bold">Skills</h1>
                     <div className='underline h-[2px] bg-primaryDark'></div>

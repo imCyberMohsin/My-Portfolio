@@ -9,7 +9,7 @@ const Portfolio = () => {
             {/* <!--! Portfolio  --> */}
             <div id="portfolio"
                 name="portfolio"
-                className="portfolio min-h-screen w-full dark:text-white text-zinc-800 dark:bg-zinc-900 bg-zinc-300 flex flex-col items-center gap-8 p-6 px-6 md:px-20">
+                className="portfolio min-h-screen w-full dark:text-white text-zinc-800 dark:bg-zinc-900 bg-zinc-200 flex flex-col items-center gap-8 p-6 px-6 md:px-20">
                 <div className="mt-6">
                     <h1 className="text-4xl font-bold">Portfolio</h1>
                     <div className='underline h-[2px] bg-primaryDark'></div>
@@ -23,7 +23,7 @@ const Portfolio = () => {
                             const stacksArray = stacks.split(', ');
                             return (
                                 <div key={name}
-                                    className="card w-80 border dark:border-zinc-600 border-zinc-400 dark:hover:border-zinc-400 hover:border-zinc-600 rounded-md flex flex-col items-center justify-between gap-3 cursor-pointer transition-all duration-300">
+                                    className="card w-80 border dark:bg-transparent bg-zinc-100 dark:border-zinc-600 border-zinc-400 dark:hover:border-zinc-400 hover:border-zinc-600 rounded-md flex flex-col items-center justify-between gap-3 cursor-pointer transition-all duration-300">
                                     <div className="img h-auto w-full">
                                         <img
                                             loading='eager'

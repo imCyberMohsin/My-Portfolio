@@ -59,7 +59,7 @@ const Footer = memo(() => {
                                 />
                                 <button
                                     type="submit"
-                                    className="p-2 rounded-full bg-primary text-white hover:ring-1 dark:hover:ring-white hover:ring-zinc-800 duration-200 transition-all md:rounded-l-none md:rounded-r-xl"
+                                    className="p-2 rounded-full dark:bg-primary bg-zinc-900 text-white hover:ring-1 dark:hover:ring-white hover:ring-zinc-800 duration-200 transition-all md:rounded-l-none md:rounded-r-xl"
                                     disabled={isSubmitting} // Disable button while submitting
                                 >
                                     {isSubmitting ? 'Sending' : 'Connect'}
@@ -75,7 +75,7 @@ const Footer = memo(() => {
                         <div className="flex items-center justify-center">
                             <button
                                 onClick={handleCopyEmail}
-                                className="flex items-center bg-primary text-white  rounded-full md:rounded-xl px-5 py-2.5 hover:shadow-lg hover:ring-2 dark:hover:ring-white hover:ring-zinc-800 duration-200 transition-all"
+                                className="flex items-center dark:bg-primary bg-zinc-900 text-white  rounded-full md:rounded-xl px-5 py-2.5 hover:shadow-lg hover:ring-2 dark:hover:ring-white hover:ring-zinc-800 duration-200 transition-all"
                                 aria-label="Copy email address"
                             >
                                 {isCopied ? (

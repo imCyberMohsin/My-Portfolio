@@ -36,7 +36,7 @@ const Contact = () => {
     return (
         <>
             {/* <!--! Contact Form --> */}
-            <div id="contact" className="contactMe w-full min-h-screen dark:bg-zinc-900 bg-zinc-300">
+            <div id="contact" className="contactMe w-full min-h-screen dark:bg-zinc-900 bg-zinc-200">
                 <form
                     onSubmit={handleSubmit}
                     className="w-full max-w-md mx-auto p-6 dark:text-white text-zinc-800"
@@ -88,7 +88,7 @@ const Contact = () => {
                     <div className='text-center'>
                         <button
                             type="submit"
-                            className={`group inline-block px-10 py-3 font-semibold uppercase text-center text-white tracking-wider bg-primaryDark rounded-full md:rounded-xl transition-all duration-200 ease-out hover:text-white hover:no-underline mt-3 w-full md:w-auto ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
+                            className={`group inline-block px-10 py-3 font-semibold uppercase text-center text-white tracking-wider dark:bg-primaryDark bg-zinc-900 dark:hover:bg-accent hover:bg-zinc-700 rounded-full md:rounded-xl transition-all duration-200 ease-out hover:text-white hover:no-underline mt-3 w-full md:w-auto ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
                             role="button"
                             disabled={isSubmitting}
                         >
